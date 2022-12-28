@@ -5,14 +5,14 @@ import { createApp } from "vue";
 import appV from "./appV.vue";
 // // import file css
 import "./assets/style.css";
-// // create app from before
-createApp(appV).mount("#appV");
+
+// // create app local
+createApp(appV).mount("#App");
+// kinesis vue libray for animation
+import VueKinesis from "vue-kinesis";
+appV.use(VueKinesis);
 // // how to create component in global app vue
-import componentA from "./components/componentA.vue";
-// const appV = createApp(appV);
-// appV.component(
-//   // registration component name
-//   "componentA",
-//   componentA
-// );
-appV.mount("#appV");
+// import componentA from "./components/componentA.vue";
+// const appV = createApp(App);
+// appV.component("componentA", componentA);
+// App.mount("#app");
