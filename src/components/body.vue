@@ -1,12 +1,14 @@
 <script setup>
-import navVue from "./nav.vue";
-import footerVue from "./footer.vue";
-import mainVue from "./main.vue";
+import wrapperVue from "./wrapper.vue";
+import "../assets/style.css";
 </script>
 <template>
-  <body class="container box-border">
-    <navVue></navVue>
-    <mainVue></mainVue>
-    <footerVue></footerVue>
+  <body class="box-border">
+    <wrapperVue> </wrapperVue>
   </body>
+  <!-- <main class="bg-mainPrimary pt-[4.938rem] ">
+      <section class="container box-border">
+        <p class="text-5xl">Helo vue</p>
+      </section>
+    </main> -->
 </template>

@@ -22,7 +22,7 @@ export default {
 </script>
 
 <template>
-  <bodyVue></bodyVue>
+  <bodyVue> </bodyVue>
   <!-- <div class="bg-primary">
       <kinesis-container class="text-center">
         Here, you can put

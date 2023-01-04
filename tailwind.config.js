@@ -8,8 +8,10 @@ module.exports = {
     },
     extend: {
       colors: {
+        // nav
+        navli: "#ffffff99",
         // Home Background
-        homePrimary: "#0d0e25;",
+        homePrimary: "#0d0e25",
         homeSecondary: "#FC881D",
         // main BG
         mainPrimary: "#FFF6ED",
@@ -25,6 +27,14 @@ module.exports = {
         accordion: "rgba(12, 27, 77, 0.6)",
         footer: "rgba(74, 114, 255, 0.05)",
         darkFooter: "rgba(30, 41, 59, .3)",
+      },
+      boxShadow: {
+        btnSecondary: "0px 30px 60px rgba(252, 136, 29, 0.25)",
+        btnfeature: "0px 30px 60px rgba(13, 14, 37, 0.2)",
+      },
+      backgroundImage: {
+        "home-primary": "url('../components/icons/Rectangle 1.svg')",
+        "home-secondary": "url('../components/icons/Rectangle 3.svg')",
       },
     },
   },
