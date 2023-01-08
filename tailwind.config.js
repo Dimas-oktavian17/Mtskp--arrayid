@@ -31,6 +31,7 @@ module.exports = {
       boxShadow: {
         btnSecondary: "0px 30px 60px rgba(252, 136, 29, 0.25)",
         btnfeature: "0px 30px 60px rgba(13, 14, 37, 0.2)",
+        expresion: " 0px 40px 60px rgba(13, 14, 37, 0.1)",
       },
       backgroundImage: {
         "home-primary": "url('../components/icons/Rectangle 1.svg')",
