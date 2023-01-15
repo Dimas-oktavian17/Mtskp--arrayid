@@ -1,5 +1,9 @@
 <script setup>
-import iconLogoVue from "./icons/iconLogo.vue";
+import { ref } from "vue";
+
+defineProps({
+  title: String,
+});
 </script>
 <template>
   <header class="container" id="beranda">
@@ -29,8 +33,9 @@ import iconLogoVue from "./icons/iconLogo.vue";
           </svg>
           <span
             class="self-center pl-4 text-lg font-bold whitespace-nowrap dark:text-white"
-            >Expression</span
           >
+            {{ title }}
+          </span>
         </a>
         <div class="flex md:order-2">
           <div class="relative hidden mr-3 md:mr-0 md:block">

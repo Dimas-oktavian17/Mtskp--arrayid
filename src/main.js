@@ -16,3 +16,9 @@ appV.use(VueKinesis);
 // const appV = createApp(App);
 // appV.component("componentA", componentA);
 // App.mount("#app");
+// import global
+//   data() {
+//     return {
+//       title: "Expression",
+//     };
+//   },

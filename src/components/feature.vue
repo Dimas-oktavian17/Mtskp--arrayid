@@ -1,946 +1,288 @@
-<script setup></script>
 <template>
-  <!-- Logo dekstop -->
-  <div class="flex flex-col items-center justify-center pt-32">
-    <svg
-      width="1138"
-      height="874"
-      viewBox="0 0 1138 874"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g filter="url(#filter0_bd_7_74)">
-        <path
-          d="M92.9077 81.4656C92.4092 67.4806 103.486 55.8099 117.478 55.5784L1032.45 40.4393C1046.85 40.2011 1058.47 52.144 1057.84 66.53L1028.77 730.023C1028.17 743.817 1016.5 754.51 1002.7 753.905L138.556 716.011C125.531 715.44 115.132 704.955 114.667 691.926L92.9077 81.4656Z"
-          fill="white"
-          fill-opacity="0.8"
-          shape-rendering="crispEdges"
-        />
-      </g>
-      <path
-        d="M752.5 253.5C752.5 253.5 768.016 231.78 783 229.5C795.648 227.575 801.781 239.884 814.5 238.5C830.167 236.796 832.376 213.934 848 216C857.829 217.299 859.802 227.441 869.5 229.5C888.145 233.459 894.205 198.669 912 205.5C920.008 208.574 920.121 218.163 928.5 220C943.486 223.285 943 196.5 955 191"
-        stroke="white"
-        stroke-opacity="0.8"
-        stroke-width="2"
-      />
-      <g filter="url(#filter1_d_7_74)">
-        <g filter="url(#filter2_b_7_74)">
+  <!-- wrapper feature -->
+  <div class="container flex flex-row items-center py-[6.25rem] gap-[8.188rem]">
+    <!-- wrapper deskripsi -->
+    <div class="flex flex-col items-start">
+      <!-- header -->
+      <div class="flex flex-row items-center gap-[0.625rem] pb-[0.625rem]">
+        <!-- svg -->
+        <svg
+          width="45"
+          height="3"
+          viewBox="0 0 45 3"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            width="45"
+            height="2"
+            transform="matrix(1 0 0 -1 0 2.5)"
+            fill="#FC881D"
+          />
+        </svg>
+        <!-- header text -->
+        <h1 class="text-base font-semibold font-header text-homeSecondary">
+          KENAPA SIH?
+        </h1>
+      </div>
+      <h2 class="order-2 pb-5 text-4xl font-bold font-header text-homePrimary">
+        Kenapa Kami Tidak Memberikan Insight Apapun?
+      </h2>
+      <!-- deskripsi -->
+      <p
+        class="order-4 text-base font-normal font-header text-homePrimary opacity-60 pb-[3.125rem]"
+      >
+        Di sini kita akan klarifikasi mengapa kita tidak memberikan insight
+        apapun di tool ini kepada kamu. Pada dasarnya hal ini kami lakukan
+        semata-mata ingin menyelamatkan planet bumi.
+      </p>
+      <!-- button -->
+      <div
+        class="flex flex-row justify-center items-center py-5 px-[1.875rem] bg-homePrimary rounded-full order-6 shadow-btnfeature"
+      >
+        <h1 class="text-base font-bold font-main text-secondary2">
+          Pelajari Lebih Lanjut
+        </h1>
+        <svg
+          width="24"
+          height="25"
+          viewBox="0 0 24 25"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <path
-            d="M40.1344 114.086C39.516 99.8663 50.8775 88 65.1108 88H294C307.807 88 319 99.1929 319 113V728.627C319 742.959 306.976 754.357 292.664 753.591L90.0761 742.752C77.2243 742.065 66.9945 731.732 66.4354 718.874L40.1344 114.086Z"
-            fill="url(#paint0_linear_7_74)"
-            fill-opacity="0.05"
+            d="M12 22.5C17.5228 22.5 22 18.0228 22 12.5C22 6.97715 17.5228 2.5 12 2.5C6.47715 2.5 2 6.97715 2 12.5C2 18.0228 6.47715 22.5 12 22.5Z"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
-        </g>
-        <g filter="url(#filter3_b_7_74)">
           <path
-            d="M40.1344 114.086C39.516 99.8663 50.8775 88 65.1108 88H294C307.807 88 319 99.1929 319 113V728.627C319 742.959 306.976 754.357 292.664 753.591L90.0761 742.752C77.2243 742.065 66.9945 731.732 66.4354 718.874L40.1344 114.086Z"
-            fill="#0D0E25"
-            fill-opacity="0.04"
+            d="M12 16.5L16 12.5L12 8.5"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
           />
-        </g>
-      </g>
-      <circle
-        r="10.5"
-        transform="matrix(1 0 0 -1 102.5 177.5)"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <circle
-        r="10.5"
-        transform="matrix(1 0 0 -1 102.5 223.5)"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <circle
-        r="10.5"
-        transform="matrix(1 0 0 -1 102.5 269.5)"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <circle
-        r="10.5"
-        transform="matrix(1 0 0 -1 102.5 315.5)"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <circle
-        r="10.5"
-        transform="matrix(1 0 0 -1 102.5 361.5)"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <circle
-        r="10.5"
-        transform="matrix(1 0 0 -1 102.5 461.5)"
-        fill="white"
-        fill-opacity="0.7"
-      />
-      <circle
-        r="10.5"
-        transform="matrix(1 0 0 -1 102.5 505.5)"
-        fill="white"
-        fill-opacity="0.7"
-      />
-      <rect
-        x="135"
-        y="174"
-        width="100"
-        height="8"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="135"
-        y="220"
-        width="77"
-        height="8"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="135"
-        y="266"
-        width="129"
-        height="8"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="135"
-        y="312"
-        width="112"
-        height="8"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="135"
-        y="358"
-        width="63"
-        height="8"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="135"
-        y="458"
-        width="63"
-        height="8"
-        rx="4"
-        fill="white"
-        fill-opacity="0.7"
-      />
-      <rect
-        x="135"
-        y="502"
-        width="93"
-        height="8"
-        rx="4"
-        fill="white"
-        fill-opacity="0.7"
-      />
-      <rect
-        x="92"
-        y="420"
-        width="63"
-        height="8"
-        rx="4"
-        fill="white"
-        fill-opacity="0.4"
-      />
-      <rect
-        x="716"
-        y="119"
-        width="269"
-        height="161"
-        rx="15"
-        fill="#F31967"
-        fill-opacity="0.05"
-      />
-      <rect
-        x="386"
-        y="119"
-        width="269"
-        height="161"
-        rx="15"
-        fill="#1977F3"
-        fill-opacity="0.05"
-      />
-      <rect
-        x="386"
-        y="119"
-        width="269"
-        height="161"
-        rx="15"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect x="424" y="398" width="523" height="313" rx="15" fill="#FFE8D2" />
-      <rect x="402" y="361" width="567" height="339" rx="15" fill="#FCCB9E" />
-      <rect x="386" y="331" width="599" height="359" rx="15" fill="#FC881D" />
-      <rect
-        x="431"
-        y="443"
-        width="377"
-        height="216"
-        rx="10"
-        fill="white"
-        fill-opacity="0.15"
-      />
-      <rect
-        x="716"
-        y="119"
-        width="269"
-        height="161"
-        rx="15"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="413"
-        y="141"
-        width="45"
-        height="45"
-        rx="5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="743"
-        y="141"
-        width="45"
-        height="45"
-        rx="5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="413"
-        y="235"
-        width="8"
-        height="31"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="479"
-        y="539"
-        width="12"
-        height="78"
-        rx="6"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="436"
-        y="228"
-        width="8"
-        height="38"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="514"
-        y="522"
-        width="13"
-        height="95"
-        rx="6.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="459"
-        y="247"
-        width="8"
-        height="19"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="550"
-        y="569"
-        width="13"
-        height="48"
-        rx="6.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="482"
-        y="217"
-        width="8"
-        height="49"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="588"
-        y="493"
-        width="11"
-        height="124"
-        rx="5.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="505"
-        y="232"
-        width="8"
-        height="34"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="623"
-        y="532"
-        width="12"
-        height="85"
-        rx="6"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="528"
-        y="228"
-        width="8"
-        height="38"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="659"
-        y="522"
-        width="12"
-        height="95"
-        rx="6"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="551"
-        y="232"
-        width="8"
-        height="34"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="694"
-        y="532"
-        width="13"
-        height="85"
-        rx="6.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="574"
-        y="220"
-        width="8"
-        height="46"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="731"
-        y="502"
-        width="12"
-        height="115"
-        rx="6"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="597"
-        y="211"
-        width="8"
-        height="55"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="766"
-        y="479"
-        width="13"
-        height="138"
-        rx="6.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="620"
-        y="206"
-        width="8"
-        height="60"
-        rx="4"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="476"
-        y="149"
-        width="45"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="806"
-        y="149"
-        width="45"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="746"
-        y="259"
-        width="16"
-        height="4"
-        rx="2"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="783"
-        y="259"
-        width="10"
-        height="4"
-        rx="2"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="808"
-        y="259"
-        width="14"
-        height="4"
-        rx="2"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="842"
-        y="259"
-        width="12"
-        height="4"
-        rx="2"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="872"
-        y="259"
-        width="10"
-        height="4"
-        rx="2"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="900"
-        y="259"
-        width="16"
-        height="4"
-        rx="2"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="930"
-        y="259"
-        width="8"
-        height="4"
-        rx="2"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="949"
-        y="259"
-        width="12"
-        height="4"
-        rx="2"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="476"
-        y="166"
-        width="75"
-        height="15"
-        rx="5"
-        fill="white"
-        fill-opacity="0.8"
-      />
-      <rect
-        x="431"
-        y="372"
-        width="45"
-        height="45"
-        rx="5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="494"
-        y="380"
-        width="45"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="494"
-        y="397"
-        width="75"
-        height="15"
-        rx="5"
-        fill="white"
-        fill-opacity="0.8"
-      />
-      <rect
-        x="617"
-        y="372"
-        width="45"
-        height="45"
-        rx="5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="680"
-        y="380"
-        width="24"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="680"
-        y="397"
-        width="82"
-        height="15"
-        rx="5"
-        fill="white"
-        fill-opacity="0.8"
-      />
-      <rect
-        x="810"
-        y="372"
-        width="45"
-        height="45"
-        rx="5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="873"
-        y="380"
-        width="24"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="873"
-        y="397"
-        width="82"
-        height="15"
-        rx="5"
-        fill="white"
-        fill-opacity="0.8"
-      />
-      <rect
-        x="806"
-        y="166"
-        width="75"
-        height="15"
-        rx="5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="449"
-        y="478"
-        width="16"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="449"
-        y="503"
-        width="16"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="449"
-        y="528"
-        width="16"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="449"
-        y="553"
-        width="16"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="449"
-        y="578"
-        width="16"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="449"
-        y="603"
-        width="16"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="449"
-        y="628"
-        width="16"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="481"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="517"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="553"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="589"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="625"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="661"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="697"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="733"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <rect
-        x="769"
-        y="628"
-        width="8"
-        height="5"
-        rx="2.5"
-        fill="white"
-        fill-opacity="0.3"
-      />
-      <path
-        d="M476 480H781"
-        stroke="white"
-        stroke-opacity="0.1"
-        stroke-width="2"
-        stroke-dasharray="10 10"
-      />
-      <path
-        d="M476 506H781"
-        stroke="white"
-        stroke-opacity="0.1"
-        stroke-width="2"
-        stroke-dasharray="10 10"
-      />
-      <path
-        d="M476 530H781"
-        stroke="white"
-        stroke-opacity="0.1"
-        stroke-width="2"
-        stroke-dasharray="10 10"
-      />
-      <path
-        d="M476 556H781"
-        stroke="white"
-        stroke-opacity="0.1"
-        stroke-width="2"
-        stroke-dasharray="10 10"
-      />
-      <path
-        d="M476 581H781"
-        stroke="white"
-        stroke-opacity="0.1"
-        stroke-width="2"
-        stroke-dasharray="10 10"
-      />
-      <path
-        d="M476 606H781"
-        stroke="white"
-        stroke-opacity="0.1"
-        stroke-width="2"
-        stroke-dasharray="10 10"
-      />
-      <circle cx="848.5" cy="474.5" r="14.5" fill="white" fill-opacity="0.4" />
-      <circle cx="848.5" cy="525.5" r="14.5" fill="white" fill-opacity="0.4" />
-      <circle cx="848.5" cy="576.5" r="14.5" fill="white" fill-opacity="0.4" />
-      <circle cx="848.5" cy="627.5" r="14.5" fill="white" fill-opacity="0.4" />
-      <rect
-        x="876"
-        y="470"
-        width="62"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="876"
-        y="521"
-        width="49"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="876"
-        y="572"
-        width="79"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <rect
-        x="876"
-        y="623"
-        width="40"
-        height="9"
-        rx="4.5"
-        fill="white"
-        fill-opacity="0.5"
-      />
-      <defs>
-        <filter
-          id="filter0_bd_7_74"
-          x="-107.108"
-          y="-159.564"
-          width="1364.97"
-          height="1113.49"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          <path
+            d="M8 12.5H16"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <!-- wrapper fitur -->
+    <div class="order-1">
+      <!-- top feature -->
+      <div class="flex flex-row items-start gap-[1px]">
+        <!-- box one -->
+        <div
+          class="flex flex-col items-start p-[2.188rem] gap-[1.1188rem] bg-homePrimary"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feGaussianBlur in="BackgroundImageFix" stdDeviation="100" />
-          <feComposite
-            in2="SourceAlpha"
-            operator="in"
-            result="effect1_backgroundBlur_7_74"
-          />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="40" />
-          <feGaussianBlur stdDeviation="40" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.0509804 0 0 0 0 0.054902 0 0 0 0 0.145098 0 0 0 0.1 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="effect1_backgroundBlur_7_74"
-            result="effect2_dropShadow_7_74"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect2_dropShadow_7_74"
-            result="shape"
-          />
-        </filter>
-        <filter
-          id="filter1_d_7_74"
-          x="0.110332"
-          y="68"
-          width="358.89"
-          height="745.627"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          <!-- header -->
+          <div class="flex flex-row items-center gap-[1.313rem]">
+            <!-- icon -->
+            <div
+              class="flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem]"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 6.66663C14.1421 6.66663 17.5 5.54734 17.5 4.16663C17.5 2.78591 14.1421 1.66663 10 1.66663C5.85786 1.66663 2.5 2.78591 2.5 4.16663C2.5 5.54734 5.85786 6.66663 10 6.66663Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.5 10C17.5 11.3833 14.1667 12.5 10 12.5C5.83333 12.5 2.5 11.3833 2.5 10"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.5 4.16663V15.8333C2.5 17.2166 5.83333 18.3333 10 18.3333C14.1667 18.3333 17.5 17.2166 17.5 15.8333V4.16663"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h1 class="order-1 text-base font-semibold text-white font-header">
+              Database
+            </h1>
+          </div>
+          <!-- deskripsi -->
+          <p class="order-1 text-base font-normal text-white">
+            Data insight yang banyak kan bakal disimpen di database, ya kalo
+            datanya banyak kan jadi gede juga size database-nya.
+          </p>
+        </div>
+        <!-- box two -->
+        <div
+          class="flex flex-col items-start p-[2.188rem] gap-[1.1188rem] bg-homePrimary"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feColorMatrix
-            in="SourceAlpha"
-            type="matrix"
-            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-            result="hardAlpha"
-          />
-          <feOffset dy="20" />
-          <feGaussianBlur stdDeviation="20" />
-          <feComposite in2="hardAlpha" operator="out" />
-          <feColorMatrix
-            type="matrix"
-            values="0 0 0 0 0.0509804 0 0 0 0 0.054902 0 0 0 0 0.145098 0 0 0 0.05 0"
-          />
-          <feBlend
-            mode="normal"
-            in2="BackgroundImageFix"
-            result="effect1_dropShadow_7_74"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_dropShadow_7_74"
-            result="shape"
-          />
-        </filter>
-        <filter
-          id="filter2_b_7_74"
-          x="-159.89"
-          y="-112"
-          width="678.89"
-          height="1065.63"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          <!-- header -->
+          <div class="flex flex-row items-center gap-[1.313rem]">
+            <!-- icon -->
+            <div
+              class="flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem]"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 6.66663C14.1421 6.66663 17.5 5.54734 17.5 4.16663C17.5 2.78591 14.1421 1.66663 10 1.66663C5.85786 1.66663 2.5 2.78591 2.5 4.16663C2.5 5.54734 5.85786 6.66663 10 6.66663Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.5 10C17.5 11.3833 14.1667 12.5 10 12.5C5.83333 12.5 2.5 11.3833 2.5 10"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.5 4.16663V15.8333C2.5 17.2166 5.83333 18.3333 10 18.3333C14.1667 18.3333 17.5 17.2166 17.5 15.8333V4.16663"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h1 class="order-1 text-base font-semibold text-white font-header">
+              Database
+            </h1>
+          </div>
+          <!-- deskripsi -->
+          <p class="order-1 text-base font-normal text-white">
+            Data insight yang banyak kan bakal disimpen di database, ya kalo
+            datanya banyak kan jadi gede juga size database-nya.
+          </p>
+        </div>
+      </div>
+      <!-- bottom feature -->
+      <div class="flex flex-row items-start gap-[1px]">
+        <!-- box three -->
+        <div
+          class="flex flex-col items-start p-[2.188rem] gap-[1.1188rem] bg-homePrimary"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feGaussianBlur in="BackgroundImageFix" stdDeviation="100" />
-          <feComposite
-            in2="SourceAlpha"
-            operator="in"
-            result="effect1_backgroundBlur_7_74"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_backgroundBlur_7_74"
-            result="shape"
-          />
-        </filter>
-        <filter
-          id="filter3_b_7_74"
-          x="-159.89"
-          y="-112"
-          width="678.89"
-          height="1065.63"
-          filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          <!-- header -->
+          <div class="flex flex-row items-center gap-[1.313rem]">
+            <!-- icon -->
+            <div
+              class="flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem]"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 6.66663C14.1421 6.66663 17.5 5.54734 17.5 4.16663C17.5 2.78591 14.1421 1.66663 10 1.66663C5.85786 1.66663 2.5 2.78591 2.5 4.16663C2.5 5.54734 5.85786 6.66663 10 6.66663Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.5 10C17.5 11.3833 14.1667 12.5 10 12.5C5.83333 12.5 2.5 11.3833 2.5 10"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.5 4.16663V15.8333C2.5 17.2166 5.83333 18.3333 10 18.3333C14.1667 18.3333 17.5 17.2166 17.5 15.8333V4.16663"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h1 class="order-1 text-base font-semibold text-white font-header">
+              Database
+            </h1>
+          </div>
+          <!-- deskripsi -->
+          <p class="order-1 text-base font-normal text-white">
+            Data insight yang banyak kan bakal disimpen di database, ya kalo
+            datanya banyak kan jadi gede juga size database-nya.
+          </p>
+        </div>
+        <!-- box four -->
+        <div
+          class="flex flex-col items-start p-[2.188rem] gap-[1.1188rem] bg-homePrimary"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
-          <feGaussianBlur in="BackgroundImageFix" stdDeviation="100" />
-          <feComposite
-            in2="SourceAlpha"
-            operator="in"
-            result="effect1_backgroundBlur_7_74"
-          />
-          <feBlend
-            mode="normal"
-            in="SourceGraphic"
-            in2="effect1_backgroundBlur_7_74"
-            result="shape"
-          />
-        </filter>
-        <linearGradient
-          id="paint0_linear_7_74"
-          x1="179"
-          y1="88"
-          x2="179"
-          y2="755"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stop-color="#FC881D" />
-          <stop offset="0.526042" stop-color="#24FF00" />
-          <stop offset="1" stop-color="#405DE6" />
-        </linearGradient>
-      </defs>
-    </svg>
+          <!-- header -->
+          <div class="flex flex-row items-center gap-[1.313rem]">
+            <!-- icon -->
+            <div
+              class="flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem]"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M10 6.66663C14.1421 6.66663 17.5 5.54734 17.5 4.16663C17.5 2.78591 14.1421 1.66663 10 1.66663C5.85786 1.66663 2.5 2.78591 2.5 4.16663C2.5 5.54734 5.85786 6.66663 10 6.66663Z"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M17.5 10C17.5 11.3833 14.1667 12.5 10 12.5C5.83333 12.5 2.5 11.3833 2.5 10"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.5 4.16663V15.8333C2.5 17.2166 5.83333 18.3333 10 18.3333C14.1667 18.3333 17.5 17.2166 17.5 15.8333V4.16663"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h1 class="order-1 text-base font-semibold text-white font-header">
+              Database
+            </h1>
+          </div>
+          <!-- deskripsi -->
+          <p class="order-1 text-base font-normal text-white">
+            Data insight yang banyak kan bakal disimpen di database, ya kalo
+            datanya banyak kan jadi gede juga size database-nya.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
+  <!-- end wrapper feature-->
 </template>
