@@ -17,6 +17,7 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
 // import featureVue from "./components/feature.vue";
 // import Wrapper from "./components/wrapper.vue";
 export default {
+
   name: "App",
   // local component registration
   components: {
@@ -34,11 +35,19 @@ export default {
     KinesisElement,
     reason,
   },
-};
+  data() {
+    return {
+      props: {
+        type: String,
+        title: "expresion",
+        // asal: "Surabaya",
+      },
+    },
+  },
+  }
 </script>
 
 <template>
-  <!-- new code refactor -->
   <div class="relative">
     <!-- main section -->
     <!-- footer section & bg -->
@@ -72,36 +81,4 @@ export default {
     <home></home>
     <navVue></navVue>
   </div>
-
-  <!-- code lama -->
-  <!-- <div>
-    <bodyVue> </bodyVue>
-    <navVue title="Expresion"></navVue>
-    <mainVue></mainVue>
-  </div> -->
-  <!-- <bodyVue> </bodyVue> -->
-  <!-- <div class="">
-    <h1 >{{ title }}</h1>
-  </div> -->
-  <!-- <div class="bg-primary">
-      <kinesis-container class="text-center">
-        Here, you can put
-        <kinesis-element
-          :duration="100000"
-          :strength="100"
-          :originX="100"
-          :originY="150"
-        >
-          whatever
-        </kinesis-element>
-        <kinesis-element
-          :duration="100000"
-          :strength="100"
-          :originX="100"
-          :originY="150"
-        >
-          content!
-        </kinesis-element>
-      </kinesis-container>
-    </div> -->
 </template>
