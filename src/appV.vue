@@ -9,6 +9,9 @@ import wrapperVue from "./components/wrapper.vue";
 import bodyVue from "./components/body.vue";
 import mainVue from "./components/main.vue";
 import bgTwo from "./components/component/bgtwo.vue";
+import alternative from "./components/component/alternative.vue";
+import expresion from "./components/component/expresion.vue";
+import reason from "./components/component/reason.vue";
 import { KinesisContainer, KinesisElement } from "vue-kinesis";
 
 // import featureVue from "./components/feature.vue";
@@ -18,6 +21,8 @@ export default {
   // local component registration
   components: {
     bgTwo,
+    alternative,
+    expresion,
     home,
     navVue,
     featureVue,
@@ -27,6 +32,7 @@ export default {
     mainVue,
     KinesisContainer,
     KinesisElement,
+    reason,
   },
 };
 </script>
@@ -37,8 +43,34 @@ export default {
     <!-- main section -->
     <!-- footer section & bg -->
     <bgTwo></bgTwo>
-    <!-- <navVue></navVue>
-    <home></home> -->
+    <div
+      class="pt-32 absolute w-full h-[719px] top-[3155px] bg-cover bg-[url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectanglefour.svg')]"
+    >
+      <!-- wrapper alternatives -->
+      <alternative></alternative>
+      <!-- end wrapper alternatives -->
+      <!-- expresion wrapper -->
+      <expresion></expresion>
+      <!-- end expresion -->
+      <!-- footer -->
+      <footerVue></footerVue>
+      <!-- end footer -->
+    </div>
+    <!-- feature  -->
+    <!-- 2380px -->
+    <div
+      class="absolute w-full h-[2080px] left-0 top-[1067px] bg-mainPrimary pt-[30rem]"
+    >
+      <!-- wrapper feature -->
+      <featureVue></featureVue>
+      <!-- end wrapper feature-->
+      <!-- wrapper reasons -->
+      <reason></reason>
+      <!-- end wrapper reasons -->
+    </div>
+
+    <home></home>
+    <navVue></navVue>
   </div>
 
   <!-- code lama -->

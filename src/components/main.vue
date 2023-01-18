@@ -12,7 +12,7 @@
   <!-- Home -->
   <div class="flex flex-row items-center justify-between pt-4">
     <!-- Icon Start -->
-    <section class="flex flex-col -space-x-16 space-y-16 w-[10%]">
+    <section class="flex flex-col -space-x-12 space-y-12 w-[10%]">
       <!-- Icon home yt -->
       <div class="flex flex-col self-start justify-start">
         <svg
@@ -232,7 +232,7 @@
     </section>
     <!-- home deskripsi end -->
     <!-- Icon end -->
-    <section class="flex flex-col space-x-16 space-y-16 w-[10%]">
+    <section class="flex flex-col space-x-12 space-y-12 w-[10%]">
       <!-- Icon home yt -->
       <div class="flex flex-col self-start justify-start">
         <svg

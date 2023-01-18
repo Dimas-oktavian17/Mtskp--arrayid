@@ -588,8 +588,20 @@ video {
   bottom: 0px;
 }
 
+.top-\[3155px\] {
+  top: 3155px;
+}
+
 .left-0 {
   left: 0px;
+}
+
+.top-\[1067px\] {
+  top: 1067px;
+}
+
+.top-3 {
+  top: 0.75rem;
 }
 
 .-top-\[13px\] {
@@ -598,14 +610,6 @@ video {
 
 .top-\[3150\.42px\] {
   top: 3150.42px;
-}
-
-.top-\[1067px\] {
-  top: 1067px;
-}
-
-.top-\[3155px\] {
-  top: 3155px;
 }
 
 .z-\[999\] {
@@ -686,12 +690,24 @@ video {
   display: none;
 }
 
-.h-screen {
-  height: 100vh;
+.h-\[719px\] {
+  height: 719px;
+}
+
+.h-\[2080px\] {
+  height: 2080px;
+}
+
+.h-\[12\.5rem\] {
+  height: 12.5rem;
 }
 
 .h-10 {
   height: 2.5rem;
+}
+
+.h-\[1240px\] {
+  height: 1240px;
 }
 
 .h-2 {
@@ -706,28 +722,16 @@ video {
   height: 1227px;
 }
 
-.h-\[719px\] {
-  height: 719px;
-}
-
 .h-\[31\.375rem\] {
   height: 31.375rem;
 }
 
-.h-\[12\.5rem\] {
-  height: 12.5rem;
+.w-full {
+  width: 100%;
 }
 
-.h-\[2080px\] {
-  height: 2080px;
-}
-
-.h-\[1240px\] {
-  height: 1240px;
-}
-
-.w-screen {
-  width: 100vw;
+.w-\[23\.25rem\] {
+  width: 23.25rem;
 }
 
 .w-10 {
@@ -764,14 +768,6 @@ video {
 
 .w-6 {
   width: 1.5rem;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.w-\[23\.25rem\] {
-  width: 23.25rem;
 }
 
 .flex-grow {
@@ -850,6 +846,18 @@ video {
   gap: 1.313rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-\[1\.938rem\] {
+  gap: 1.938rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-\[30px\] {
   gap: 30px;
 }
@@ -878,34 +886,22 @@ video {
   gap: 1.563rem;
 }
 
-.gap-16 {
-  gap: 4rem;
-}
-
-.gap-\[1\.938rem\] {
-  gap: 1.938rem;
-}
-
-.gap-3 {
-  gap: 0.75rem;
-}
-
-.-space-x-16 > :not([hidden]) ~ :not([hidden]) {
+.-space-x-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(-4rem * var(--tw-space-x-reverse));
-  margin-left: calc(-4rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(-3rem * var(--tw-space-x-reverse));
+  margin-left: calc(-3rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-16 > :not([hidden]) ~ :not([hidden]) {
+.space-y-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
-  margin-top: calc(4rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(4rem * var(--tw-space-y-reverse));
+  margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(3rem * var(--tw-space-y-reverse));
 }
 
-.space-x-16 > :not([hidden]) ~ :not([hidden]) {
+.space-x-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
-  margin-right: calc(4rem * var(--tw-space-x-reverse));
-  margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
+  margin-right: calc(3rem * var(--tw-space-x-reverse));
+  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .self-start {
@@ -940,6 +936,10 @@ video {
   border-radius: 0.313rem;
 }
 
+.rounded-\[0\.625rem\] {
+  border-radius: 0.625rem;
+}
+
 .rounded-md {
   border-radius: 0.375rem;
 }
@@ -958,10 +958,6 @@ video {
 
 .rounded-\[1\.25rem\] {
   border-radius: 1.25rem;
-}
-
-.rounded-\[0\.625rem\] {
-  border-radius: 0.625rem;
 }
 
 .rounded-tl-3xl {
@@ -984,11 +980,6 @@ video {
 .border-gray-100 {
   --tw-border-opacity: 1;
   border-color: rgb(243 244 246 / var(--tw-border-opacity));
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-mainPrimary {
@@ -1024,20 +1015,20 @@ video {
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'https\:\/\/dimas-oktavian17\.github\.io\/assets\/iconFigma\/Rectangletiga\.svg\'\)\] {
-  background-image: url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectangletiga.svg');
-}
-
-.bg-\[url\(\'https\:\/\/dimas-oktavian17\.github\.io\/assets\/iconFigma\/Rectangletwo\.svg\'\)\] {
-  background-image: url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectangletwo.svg');
-}
-
 .bg-\[url\(\'https\:\/\/dimas-oktavian17\.github\.io\/assets\/iconFigma\/Rectanglefour\.svg\'\)\] {
   background-image: url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectanglefour.svg');
 }
 
 .bg-\[url\(\'https\:\/\/dimas-oktavian17\.github\.io\/assets\/iconFigma\/Rectangleone\.svg\'\)\] {
   background-image: url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectangleone.svg');
+}
+
+.bg-\[url\(\'https\:\/\/dimas-oktavian17\.github\.io\/assets\/iconFigma\/Rectangletiga\.svg\'\)\] {
+  background-image: url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectangletiga.svg');
+}
+
+.bg-\[url\(\'https\:\/\/dimas-oktavian17\.github\.io\/assets\/iconFigma\/Rectangletwo\.svg\'\)\] {
+  background-image: url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectangletwo.svg');
 }
 
 .bg-cover {
@@ -1124,8 +1115,12 @@ video {
   padding-bottom: 0.625rem;
 }
 
-.pt-\[4\.938rem\] {
-  padding-top: 4.938rem;
+.pt-32 {
+  padding-top: 8rem;
+}
+
+.pt-\[30rem\] {
+  padding-top: 30rem;
 }
 
 .pb-\[0\.625rem\] {
@@ -1140,8 +1135,8 @@ video {
   padding-bottom: 3.125rem;
 }
 
-.pt-32 {
-  padding-top: 8rem;
+.pt-\[4\.938rem\] {
+  padding-top: 4.938rem;
 }
 
 .pt-4 {
@@ -1168,10 +1163,6 @@ video {
   padding-right: 1rem;
 }
 
-.pt-\[30rem\] {
-  padding-top: 30rem;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1188,11 +1179,6 @@ video {
   font-family: DM Sans, sans-serif;
 }
 
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
-}
-
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -1201,6 +1187,15 @@ video {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-\[1\.375rem\] {
+  font-size: 1.375rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-2xl {
@@ -1222,10 +1217,6 @@ video {
   font-size: 3rem;
 }
 
-.text-\[1\.375rem\] {
-  font-size: 1.375rem;
-}
-
 .font-semibold {
   font-weight: 600;
 }
@@ -1238,21 +1229,16 @@ video {
   font-weight: 400;
 }
 
-.leading-none {
-  line-height: 1;
-}
-
 .leading-\[1\.875rem\] {
   line-height: 1.875rem;
 }
 
-.tracking-widest {
-  letter-spacing: 0.1em;
+.leading-none {
+  line-height: 1;
 }
 
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
+.tracking-widest {
+  letter-spacing: 0.1em;
 }
 
 .text-homeSecondary {
@@ -1270,6 +1256,16 @@ video {
   color: rgb(244 247 255 / var(--tw-text-opacity));
 }
 
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-secondary {
+  --tw-text-opacity: 1;
+  color: rgb(12 27 77 / var(--tw-text-opacity));
+}
+
 .text-\[\#F4F7FF\] {
   --tw-text-opacity: 1;
   color: rgb(244 247 255 / var(--tw-text-opacity));
@@ -1282,11 +1278,6 @@ video {
 
 .text-navli {
   color: #ffffff99;
-}
-
-.text-secondary {
-  --tw-text-opacity: 1;
-  color: rgb(12 27 77 / var(--tw-text-opacity));
 }
 
 .opacity-60 {
