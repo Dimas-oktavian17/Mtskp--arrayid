@@ -17,7 +17,6 @@ import { KinesisContainer, KinesisElement } from "vue-kinesis";
 // import featureVue from "./components/feature.vue";
 // import Wrapper from "./components/wrapper.vue";
 export default {
-
   name: "App",
   // local component registration
   components: {
@@ -35,16 +34,16 @@ export default {
     KinesisElement,
     reason,
   },
-  data() {
-    return {
-      props: {
-        type: String,
-        title: "expresion",
-        // asal: "Surabaya",
-      },
-    },
-  },
-  }
+  // data() {
+  //   return {
+  //     props: {
+  //       type: String,
+  //       title: "expresion",
+  //       // asal: "Surabaya",
+  //     },
+  //   },
+  // },
+};
 </script>
 
 <template>
@@ -53,7 +52,7 @@ export default {
     <!-- footer section & bg -->
     <bgTwo></bgTwo>
     <div
-      class="pt-32 absolute w-full h-[719px] top-[3155px] bg-cover bg-[url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectanglefour.svg')]"
+      class="lg:pt-32 absolute w-full h-[719px] lg:top-[3155px] top-[4400px] bg-cover bg-[url('https://dimas-oktavian17.github.io/assets/iconFigma/Rectanglefour.svg')]"
     >
       <!-- wrapper alternatives -->
       <alternative></alternative>

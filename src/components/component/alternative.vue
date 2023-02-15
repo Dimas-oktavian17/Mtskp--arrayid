@@ -2,9 +2,11 @@
   <!-- wrapper alternatives -->
   <div class="container">
     <!-- header -->
-    <div class="flex flex-row items-center gap-[1.875rem]">
+    <div
+      class="flex flex-col lg:flex-row items-center gap-[1.875rem] pt-28 pl-10 lg:p-0"
+    >
       <!-- header wrapper -->
-      <div class="flex flex-col items-start justify-center">
+      <div class="flex flex-col items-start justify-center w-full lg:w-3/5">
         <div class="pb-[0.625rem] flex flex-row items-center gap-[0.625rem]">
           <!-- svg -->
           <svg
@@ -30,7 +32,9 @@
         </h1>
       </div>
       <!-- deskripsi -->
-      <p class="order-1 text-base font-normal text-white font-header grow">
+      <p
+        class="order-1 w-full pr-8 text-base font-normal text-white font-header grow lg:w-2/5 lg:pr-0"
+      >
         Seperti yang lo tau sendiri ya, tool ini tuh nggak ada apa-apanya.
         Barangkali lo udah serius gitu butuh tool untuk sosial media, maka dari
         itu kita kasih 2 alternatif yang bisa lo pake untuk sosial media lo.

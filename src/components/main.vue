@@ -12,7 +12,7 @@
   <!-- Home -->
   <div class="flex flex-row items-center justify-between pt-4">
     <!-- Icon Start -->
-    <section class="flex flex-col -space-x-12 space-y-12 w-[10%]">
+    <section class="lg:flex hidden flex-col -space-x-12 space-y-12 w-[10%]">
       <!-- Icon home yt -->
       <div class="flex flex-col self-start justify-start">
         <svg
@@ -171,39 +171,44 @@
     </section>
     <!-- end icon start -->
     <!-- Home deskripsi -->
-    <section class="flex flex-col items-center justify-center w-4/5">
+    <section
+      class="flex flex-col items-start justify-center lg:items-center lg:w-4/5"
+    >
       <h1
-        class="pb-5 text-base font-semibold text-center font-header text-homeSecondary"
+        class="pb-5 pl-10 text-base font-semibold text-left lg:pl-0 lg:text-center font-header text-homeSecondary"
       >
         MANA SAYA TAU SAYA KAN PENCURRY
       </h1>
       <h2
-        class="order-2 px-24 text-[3rem] leading-none font-normal text-center text-white font-header"
+        class="order-2 pl-10 lg:px-24 text-[3rem] leading-none font-normal lg:text-center text-left text-white font-header"
       >
         Social Media Tool Yang Tidak Akan Memberikan Kamu Insight Apapun
       </h2>
       <p
-        class="pt-[2.125rem] w-[573px] font-header font-normal text-lg text-center text-white order-4 pb-[3.75rem]"
+        class="pt-[2.125rem] pl-10 pr-8 lg:px-0 font-header font-normal text-lg text-left lg:text-center text-white order-4 pb-[3.75rem]"
       >
         Adalah benar apa yang kamu baca barusan. Tool yang mainstream akan
         memberikan kamu pelbagai insight, karena kami anti-mainstream maka kami
         akan melakukan sebaliknya.
       </p>
-      <div class="flex flex-row items-start gap-[15px] order-6">
+      <div
+        class="flex flex-row justify-center items-center pl-10 lg:pl-0 gap-[15px] order-6"
+      >
         <!-- btn orange -->
         <button
           type="button"
-          class="flex flex-row justify-center items-center py-4 px-10 rounded-full bg-homeSecondary shadow-btnSecondary font-main font-bold text-[#F4F7FF] text-base"
+          class="flex flex-row justify-center items-center py-3 lg:py-4 px-5 lg:px-10 rounded-full bg-homeSecondary shadow-btnSecondary font-main font-bold text-[#F4F7FF] text-base hover:transition-all hover:opacity-80"
         >
           Memulai Sekarang
         </button>
         <!-- black btn -->
         <button
           type="button"
-          class="flex flex-row items-center justify-center order-1 px-10 py-4 text-base font-bold text-white bg-transparent rounded-md font-main"
+          class="flex flex-row items-center justify-center order-1 px-5 py-3 text-base font-bold text-white bg-transparent rounded-md group hover:transition-all hover:shadow-lg lg:py-4 lg:px-10 font-main"
         >
           <!-- Play icon -->
           <svg
+            class="transition-all group-hover:rotate-90"
             width="20"
             height="21"
             viewBox="0 0 20 21"
@@ -232,7 +237,9 @@
     </section>
     <!-- home deskripsi end -->
     <!-- Icon end -->
-    <section class="flex flex-col space-x-12 space-y-12 w-[10%]">
+    <section
+      class="lg:flex flex-col hidden space-x-10 space-y-10 lg:space-x-12 lg:space-y-12 w-[10%]"
+    >
       <!-- Icon home yt -->
       <div class="flex flex-col self-start justify-start">
         <svg

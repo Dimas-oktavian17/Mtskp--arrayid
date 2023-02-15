@@ -3,8 +3,7 @@
   <!-- Logo dekstop -->
   <div class="flex flex-col items-center justify-center pt-32">
     <svg
-      width="1138"
-      height="874"
+      class="w-auto h-auto"
       viewBox="0 0 1138 874"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

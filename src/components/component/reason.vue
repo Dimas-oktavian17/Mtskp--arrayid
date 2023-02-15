@@ -9,11 +9,13 @@
         TERUS GIMANA?
       </h1>
       <h2
-        class="order-2 pb-5 text-4xl font-bold text-center font-header text-homePrimary"
+        class="order-2 pb-5 text-4xl font-bold text-center font-header text-homePrimary lg:px-52"
       >
         Terus Ngapain Dong Kalo Nggak Ada Insight Apapun?
       </h2>
-      <p class="text-base text-center font-header text-homePrimary opacity-60">
+      <p
+        class="order-3 text-base text-center font-header text-homePrimary opacity-60 lg:px-56"
+      >
         Ya nggak tau, salah sendiri lu ngapain ke website ini. Tapi ada tiga
         kemungkinan kenapa lo bisa ada di website ini. Ketiga kemungkinan itu
         akan gwej jabarkan di bawah ini dengan ilustrasinya hehehe.
@@ -21,12 +23,12 @@
     </div>
     <!-- end head wrapper -->
     <!-- wrapper deskripsi -->
-    <div class="flex flex-row items-start gap-[1.938rem] order-1">
+    <div class="flex flex-col lg:flex-row items-start gap-[1.938rem] order-1">
       <!-- box one -->
       <div class="flex flex-col items-start gap-3">
         <!-- svg -->
         <div
-          class="w-[23.25rem] h-[12.5rem] rounded-[0.625rem] bg-homePrimary opacity-5 flex flex-col items-center justify-center"
+          class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-homePrimary opacity-5 flex flex-col items-center justify-center"
         >
           <svg
             width="94"
@@ -70,7 +72,7 @@
       <div class="flex flex-col items-start gap-3">
         <!-- svg -->
         <div
-          class="w-[23.25rem] h-[12.5rem] rounded-[0.625rem] bg-homePrimary opacity-5 flex flex-col items-center justify-center"
+          class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-homePrimary opacity-5 flex flex-col items-center justify-center"
         >
           <svg
             width="94"
@@ -114,7 +116,7 @@
       <div class="flex flex-col items-start gap-3">
         <!-- svg -->
         <div
-          class="w-[23.25rem] h-[12.5rem] rounded-[0.625rem] bg-homePrimary opacity-5 flex flex-col items-center justify-center"
+          class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-homePrimary opacity-5 flex flex-col items-center justify-center"
         >
           <svg
             width="94"
