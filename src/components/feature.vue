@@ -1,10 +1,44 @@
+<script>
+// import Flicking from "@egjs/vue3-flicking";
+// import "@egjs/vue3-flicking/dist/flicking.css";
+// // import { AutoPlay } from "@egjs/vue3-flicking";
+
+// export default {
+//   components: {
+//     Flicking,
+//   },
+//   data() {
+//     return {
+//       plugins: [new AutoPlay()],
+//     };
+//   },
+// };
+</script>
 <template>
   <!-- wrapper feature -->
   <div
     class="container flex flex-col lg:flex-row items-center py-[6.25rem] gap-[8.188rem]"
   >
+    <!-- <flicking>
+      <div class="flicking-panel">1</div>
+      <div class="flicking-panel nested-wide">
+        <flicking :options="{ bounce: 0, bound: true, nested: true }">
+          <div class="flicking-panel">2.1</div>
+          <div class="flicking-panel">2.2</div>
+          <div class="flicking-panel">2.3</div>
+        </flicking>
+      </div>
+      <div class="flicking-panel nested-wide vertical">
+        <flicking :options="{ bounce: 0, bound: true, horizontal: false }">
+          <div class="flicking-panel">3.1</div>
+          <div class="flicking-panel">3.2</div>
+          <div class="flicking-panel">3.3</div>
+        </flicking>
+      </div>
+      <div class="flicking-panel">4</div>
+    </flicking> -->
     <!-- wrapper deskripsi -->
-    <div class="flex flex-col items-start w-full lg:w-2/5">
+    <div class="flex flex-col items-start w-full lg:w-2/5 lg:pl-10 xl:pl-0">
       <!-- header -->
       <div
         class="flex flex-row pl-10 lg:pl-0 items-center gap-[0.625rem] pb-[0.625rem]"
@@ -30,20 +64,19 @@
         </h1>
       </div>
       <h2
-        class="order-2 pb-5 pl-10 text-4xl font-bold lg:pl-0 font-header text-homePrimary"
+        class="order-2 pb-5 pl-10 text-4xl font-bold lg:pl-0 font-header text-homePrimary xl:w-[29rem]"
       >
         Kenapa Kami Tidak Memberikan Insight Apapun?
       </h2>
       <!-- deskripsi -->
       <p
-        class="order-4 text-base font-normal pl-10 pr-8 lg:pl-0 font-header text-homePrimary opacity-60 pb-[3.125rem]"
+        class="xl:w-[29rem] order-4 text-base font-normal pl-10 pr-8 lg:pl-0 font-header text-homePrimary opacity-60 pb-[3.125rem]"
       >
         Di sini kita akan klarifikasi mengapa kita tidak memberikan insight
         apapun di tool ini kepada kamu. Pada dasarnya hal ini kami lakukan
         semata-mata ingin menyelamatkan planet bumi.
       </p>
       <!-- button -->
-
       <button
         class="text-base font-bold font-main text-secondary2 flex flex-row justify-between items-center ml-10 lg:ml-0 py-3 lg:py-5 px-5 lg:px-[1.875rem] bg-homePrimary rounded-full order-6 shadow-btnfeature group transition-all hover:pr-8 hover:opacity-95"
       >

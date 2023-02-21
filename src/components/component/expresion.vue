@@ -80,38 +80,4 @@
   <!-- end expresion -->
 </template>
 
-<script>
-// let cinta = document.getElementById("love");
-// // do you want to be a complement to my life?
-// const exspresion = (love) => {
-//   const feeling =
-//     love >= "true"
-//       ? "Terimakasih sudah mempercayaiku♡!"
-//       : "Tidak masalah mungkin kita belum jodoh'nya:).";
-//   console.log(feeling);
-// };
-// // true or false?
-// exspresion();
-// cinta.addEventListener("click", () => {
-//   // let age = prompt("Berapakah umut anda?", 100);
-//   const feeling =
-//     love >= "true"
-//       ? "Terimakasih sudah mempercayaiku♡!"
-//       : "Tidak masalah mungkin kita belum jodoh'nya:).";
-//   alert(`umur anda ${feeling}`);
-// });
-// // let age = prompt("Berapakah umut anda?", 100);
-
-// // alert(`Umur Anda ${age} tahun`); // Umur Anda 100 tahun!
-
-// eksekusi
-let btn = document.querySelector('[aria-label="ekspresi"]');
-let ekspresi = document.getElementById("answer");
-btn.addEventListener("click", (e) => {
-  // if (ekspresi.value === "true") {
-  //   console.log("oke msipppp");
-  // } else {
-  //   console.log("noooooooo");
-  // }
-});
-</script>
+<script></script>
