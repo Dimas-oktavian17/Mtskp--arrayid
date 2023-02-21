@@ -8,17 +8,13 @@ import "./assets/style.css";
 
 // // create app local
 createApp(appV).mount("#App");
-// kinesis vue libray for animation
+// kinesis vue libray for animation & flicking libray
 import VueKinesis from "vue-kinesis";
-appV.use(VueKinesis);
-// // how to create component in global app vue
-// import componentA from "./components/componentA.vue";
-// const appV = createApp(App);
-// appV.component("componentA", componentA);
-// App.mount("#app");
-// import global
-//   data() {
-//     return {
-//       title: "Expression",
-//     };
-//   },
+// import Flicking from "@egjs/vue3-flicking";
+// appV.use(VueKinesis);
+// appV.component(
+//   // the registered name
+//   "Flicking",
+//   Flicking
+//   // the implementation
+// );

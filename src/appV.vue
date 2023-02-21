@@ -34,15 +34,16 @@ export default {
     KinesisElement,
     reason,
   },
-  // data() {
-  //   return {
-  //     props: {
-  //       type: String,
-  //       title: "expresion",
-  //       // asal: "Surabaya",
-  //     },
-  //   },
-  // },
+  data() {
+    return {
+      text: "Expression",
+    };
+  },
+  methods: {
+    ClickMee(name) {
+      alert("Click me clicked " + nae);
+    },
+  },
 };
 </script>
 
@@ -67,7 +68,7 @@ export default {
     <!-- feature  -->
     <!-- 2380px -->
     <div
-      class="absolute w-full h-[2080px] left-0 top-[1067px] bg-mainPrimary pt-[30rem]"
+      class="absolute w-full lg:h-[130rem] h-[210rem] left-0 top-[1067px] bg-mainPrimary pt-[30rem]"
     >
       <!-- wrapper feature -->
       <featureVue></featureVue>
@@ -78,6 +79,6 @@ export default {
     </div>
 
     <home></home>
-    <navVue></navVue>
+    <navVue :title="text"></navVue>
   </div>
 </template>

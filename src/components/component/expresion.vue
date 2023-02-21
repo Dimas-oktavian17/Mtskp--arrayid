@@ -1,3 +1,26 @@
+<script>
+export default {
+  props: ["inputText"],
+  data() {
+    return {
+      benar: "True",
+      salah: false,
+      myInput: "",
+      placeholderTxt: "Input data",
+    };
+  },
+  methods: {
+    kondisi() {
+      if (this.myInput === "true") {
+        ("loveeee");
+      }
+      if (this.myInput === "false") {
+        ("falsee");
+      }
+    },
+  },
+};
+</script>
 <template>
   <!-- expresion wrapper -->
   <div
@@ -29,17 +52,30 @@
               class="w-full px-3 py-4 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
               id="answer"
               type="text"
-              placeholder="true"
+              v-model="myInput"
+              :placeholder="inputText"
             />
+            <p
+              v-if="myInput === 'true'"
+              class="block mb-2 text-sm font-bold text-gray-600 font-header"
+            >
+              Terimakasih udah mempercayiku & love you♡
+            </p>
+            <p
+              v-if="myInput === 'false'"
+              class="block mb-2 text-sm font-bold text-gray-600 font-header"
+            >
+              Gapapa mungkin kita belum jodoh'nya:)
+            </p>
           </div>
 
           <div class="flex items-center justify-center pb-10">
             <button
-              aria-label="ekspresi"
               type="button"
               class="flex flex-row items-center order-6 px-5 py-3 text-base font-bold transition-all rounded-full justify-self-center font-main text-secondary2 lg:ml-0 lg:py-3 lg:px-10 bg-homePrimary shadow-btnfeature group hover:pr-8 hover:opacity-95"
+              v-on:send="myInput"
             >
-              Expression
+              Send
               <svg
                 class="ml-1 transition-all group-hover:ml-4"
                 width="24"
@@ -79,39 +115,4 @@
   </div>
   <!-- end expresion -->
 </template>
-
-<script>
-// let cinta = document.getElementById("love");
-// // do you want to be a complement to my life?
-// const exspresion = (love) => {
-//   const feeling =
-//     love >= "true"
-//       ? "Terimakasih sudah mempercayaiku♡!"
-//       : "Tidak masalah mungkin kita belum jodoh'nya:).";
-//   console.log(feeling);
-// };
-// // true or false?
-// exspresion();
-// cinta.addEventListener("click", () => {
-//   // let age = prompt("Berapakah umut anda?", 100);
-//   const feeling =
-//     love >= "true"
-//       ? "Terimakasih sudah mempercayaiku♡!"
-//       : "Tidak masalah mungkin kita belum jodoh'nya:).";
-//   alert(`umur anda ${feeling}`);
-// });
-// // let age = prompt("Berapakah umut anda?", 100);
-
-// // alert(`Umur Anda ${age} tahun`); // Umur Anda 100 tahun!
-
-// eksekusi
-let btn = document.querySelector('[aria-label="ekspresi"]');
-let ekspresi = document.getElementById("answer");
-btn.addEventListener("click", (e) => {
-  // if (ekspresi.value === "true") {
-  //   console.log("oke msipppp");
-  // } else {
-  //   console.log("noooooooo");
-  // }
-});
-</script>
+<!-- @click="$emit('clicked', 'Dimas') -->

@@ -1,14 +1,34 @@
-<script setup>
+<script>
 import { ref } from "vue";
-
-defineProps({
-  title: String,
-});
+import Burger from "./component/hamburger.vue";
+// in non-<script setup>
+export default {
+  name: "nav",
+  components: {
+    Burger,
+  },
+  // props: {
+  //   active: {
+  //     type: Boolean,
+  //     required: false,
+  //     default: true,
+  //   },
+  // },
+  data() {
+    return {
+      navOpen: true,
+    };
+  },
+  props: {
+    title: String,
+  },
+};
 </script>
 <template>
   <header class="container" id="beranda">
     <nav class="px-2 mb-10 border-gray-200 font-header" id="nav">
       <div
+        id="sidemenu"
         class="fixed container bg-[#1b1525] w-[95%] z-[999] mx-auto flex flex-wrap items-center justify-between rounded-xl lg:w-[98%]"
       >
         <a href="#beranda" class="flex">
@@ -33,6 +53,7 @@ defineProps({
           </svg>
           <span
             class="self-center pl-4 text-lg font-bold whitespace-nowrap dark:text-white"
+            :title="title"
           >
             {{ title }}
           </span>
@@ -53,55 +74,43 @@ defineProps({
             </a>
           </div>
           <button
+            @click="navOpen = !navOpen"
             data-collapse-toggle="mobile-menu-3"
             type="button"
             class="inline-flex items-center justify-center text-gray-400 rounded-lg md:hidden group hover:text-gray-900"
             aria-controls="mobile-menu-3"
             aria-expanded="false"
-            id="hamburger"
           >
             <span class="sr-only">Open main menu</span>
             <div class="flex flex-col items-end">
               <p
-                class="bg-blue-600 transition duration-300 ease-in-out w-[30px] h-2 rounded-lg dark:bg-primary2 dark:active:bg-primary2hover"
+                :class="{
+                  ' origin-bottom-left rotate-[1deg] bg-slate-300 transition duration-300 ease-in-out w-[30px] h-2 rounded-lg':
+                    navOpen,
+                }"
+                class="origin-bottom-left rotate-45 w-[40px] h-2 bg-slate-300 rounded-lg duration-300 ease-in-out"
               ></p>
               <p
-                class="w-4 h-2 my-1 transition duration-300 ease-in-out bg-blue-600 rounded-lg dark:bg-primary2 dark:active:bg-primary2hover"
+                :class="{
+                  'scale-125 origin-top-right rotate-0 w-4 h-2 my-1 transition duration-300 ease-in-out rounded-lg bg-slate-300':
+                    navOpen,
+                }"
+                class="w-4 h-2 my-1 transition duration-300 ease-in-out origin-right scale-0 rotate-45 rounded-lg bg-slate-300"
               ></p>
               <p
-                class="w-2 h-2 transition duration-300 ease-in-out bg-blue-600 rounded-lg dark:bg-primary2 dark:active:bg-primary2hover"
+                :class="{
+                  '-rotate-[45deg] origin-top-right w-2 h-2 transition duration-300 ease-in-out rounded-lg bg-slate-300':
+                    navOpen,
+                }"
+                class="rotate-[45deg] origin-top-right w-[30px] h-2 transition duration-300 ease-in-out rounded-lg bg-slate-300"
               ></p>
             </div>
-            <svg
-              class="hidden w-6 h-6"
-              id="hamburger"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-            <svg
-              class="hidden w-6 h-6"
-              id="close"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
           </button>
         </div>
+        <!-- <burger @toggle-menu="active = !active"></burger> -->
         <div
-          class="items-center justify-between hidden w-full backdrop-blur-md md:backdrop-blur-0 md:flex md:w-auto md:order-1"
+          :class="{ hidden: navOpen }"
+          class="items-center justify-between w-full backdrop-blur-md md:backdrop-blur-0 md:flex md:w-auto md:order-1"
           id="mobile-menu-3"
         >
           <ul

@@ -9,17 +9,17 @@
 }
 /* hamburger */
 @layer components {
-  .active > div > p:nth-child(1) {
-    @apply origin-bottom-left rotate-45 bg-primary dark:bg-primary2hover;
+  .on > div > p:nth-child(1) {
+    @apply origin-bottom-left rotate-45;
   }
 }
 @layer components {
-  .active > div > p:nth-child(2) {
+  .on > div > p:nth-child(2) {
     @apply scale-0;
   }
 }
 @layer components {
-  .active > div > p:nth-child(3) {
-    @apply -rotate-[45deg] origin-top-left w-[30px] bg-primary dark:bg-primary2hover;
+  .on > div > p:nth-child(3) {
+    @apply -rotate-[45deg] origin-top-left w-[30px];
   }
 }

@@ -1,10 +1,80 @@
+<script>
+import { ref } from "vue";
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/swiper.css";
+
+import "swiper/swiper-bundle.css";
+// import "swiper/css/navigation";
+
+import "../assets/swipper.css";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper";
+
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    const progressCircle = ref(null);
+    const progressContent = ref(null);
+    const onAutoplayTimeLeft = (s, time, progress) => {
+      progressCircle.value.style.setProperty("--progress", 1 - progress);
+      progressContent.value.textContent = `${Math.ceil(time / 1000)}s`;
+    };
+    return {
+      onAutoplayTimeLeft,
+      progressCircle,
+      progressContent,
+      modules: [Autoplay, Pagination, Navigation],
+    };
+  },
+};
+</script>
 <template>
   <!-- wrapper feature -->
   <div
     class="container flex flex-col lg:flex-row items-center py-[6.25rem] gap-[8.188rem]"
   >
+    <swiper
+      :spaceBetween="30"
+      :centeredSlides="true"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }"
+      :pagination="{
+        clickable: true,
+      }"
+      :navigation="true"
+      :modules="modules"
+      @autoplayTimeLeft="onAutoplayTimeLeft"
+      class="mySwiper"
+    >
+      <swiper-slide>Slide 1</swiper-slide>
+      <swiper-slide>Slide 2</swiper-slide>
+      <swiper-slide>Slide 3</swiper-slide>
+      <swiper-slide>Slide 4</swiper-slide>
+      <swiper-slide>Slide 5</swiper-slide>
+      <swiper-slide>Slide 6</swiper-slide>
+      <swiper-slide>Slide 7</swiper-slide>
+      <swiper-slide>Slide 8</swiper-slide>
+      <swiper-slide>Slide 9</swiper-slide>
+      <template #container-end>
+        <div class="autoplay-progress">
+          <svg viewBox="0 0 48 48" ref="progressCircle">
+            <circle cx="24" cy="24" r="20"></circle>
+          </svg>
+          <span ref="progressContent"></span>
+        </div>
+      </template>
+    </swiper>
     <!-- wrapper deskripsi -->
-    <div class="flex flex-col items-start w-full lg:w-2/5">
+    <div class="flex flex-col items-start w-full lg:w-2/5 lg:pl-10 xl:pl-0">
       <!-- header -->
       <div
         class="flex flex-row pl-10 lg:pl-0 items-center gap-[0.625rem] pb-[0.625rem]"
@@ -30,20 +100,19 @@
         </h1>
       </div>
       <h2
-        class="order-2 pb-5 pl-10 text-4xl font-bold lg:pl-0 font-header text-homePrimary"
+        class="order-2 pb-5 pl-10 text-4xl font-bold lg:pl-0 font-header text-homePrimary xl:w-[29rem]"
       >
         Kenapa Kami Tidak Memberikan Insight Apapun?
       </h2>
       <!-- deskripsi -->
       <p
-        class="order-4 text-base font-normal pl-10 pr-8 lg:pl-0 font-header text-homePrimary opacity-60 pb-[3.125rem]"
+        class="xl:w-[29rem] order-4 text-base font-normal pl-10 pr-8 lg:pl-0 font-header text-homePrimary opacity-60 pb-[3.125rem]"
       >
         Di sini kita akan klarifikasi mengapa kita tidak memberikan insight
         apapun di tool ini kepada kamu. Pada dasarnya hal ini kami lakukan
         semata-mata ingin menyelamatkan planet bumi.
       </p>
       <!-- button -->
-
       <button
         class="text-base font-bold font-main text-secondary2 flex flex-row justify-between items-center ml-10 lg:ml-0 py-3 lg:py-5 px-5 lg:px-[1.875rem] bg-homePrimary rounded-full order-6 shadow-btnfeature group transition-all hover:pr-8 hover:opacity-95"
       >
