@@ -1772,16 +1772,16 @@ video {
     padding-top: 8rem;
   }
 
+  .lg\:pl-10 {
+    padding-left: 2.5rem;
+  }
+
   .lg\:pl-0 {
     padding-left: 0px;
   }
 
   .lg\:pr-0 {
     padding-right: 0px;
-  }
-
-  .lg\:pl-10 {
-    padding-left: 2.5rem;
   }
 
   .lg\:text-center {
