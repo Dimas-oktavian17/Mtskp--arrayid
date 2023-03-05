@@ -9,7 +9,7 @@ import "./assets/style.css";
 // // create app local
 createApp(appV).mount("#App");
 // kinesis vue libray for animation & flicking libray
-import VueKinesis from "vue-kinesis";
+// import VueKinesis from "vue-kinesis";
 // import Flicking from "@egjs/vue3-flicking";
 // appV.use(VueKinesis);
 // appV.component(

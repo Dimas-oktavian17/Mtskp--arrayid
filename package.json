@@ -5,11 +5,12 @@
   "scripts": {
     "css": "npx tailwindcss -i ./src/assets/input.css -o ./src/assets/style.css --watch",
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build",  
     "preview": "vite preview"
   },
   "dependencies": {
     "@egjs/vue3-flicking": "^4.10.6",
+    "@emailjs/browser": "^3.10.0",
     "swiper": "^9.0.5",
     "vue": "^3.2.45",
     "vue-kinesis": "^2.0.5"
