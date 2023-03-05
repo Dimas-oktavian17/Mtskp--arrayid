@@ -2,6 +2,14 @@
 module.exports = {
   content: ["./src/**/*.{html,js,vue}"],
   theme: {
+    screens: {
+      xxs: "320px",
+      xs: "375px",
+      sm: "425px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+    },
     fontFamily: {
       header: ["Source Sans Pro", "sans-serif"],
       main: ["DM Sans", "sans-serif"],

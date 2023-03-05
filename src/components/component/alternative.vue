@@ -1,6 +1,6 @@
 <template>
   <!-- wrapper alternatives -->
-  <div class="container">
+  <div class="container scroll-mt-32 lg:scroll-mt-72" id="alternatives">
     <!-- header -->
     <div
       class="flex flex-col lg:flex-row items-center gap-[1.875rem] pt-28 pl-10 lg:p-0"
@@ -28,16 +28,15 @@
           </p>
         </div>
         <h1 class="order-2 text-4xl font-bold text-white font-header">
-          Karena Tool Kita Ini Nggak Ada Apa-Apanya, Inilah Alternatifnya!
+          Karena Kami Ini Nggak Ada Apa-Apanya, Lebih Baik Cari Lain!
         </h1>
       </div>
       <!-- deskripsi -->
       <p
         class="order-1 w-full pr-8 text-base font-normal text-white font-header grow lg:w-2/5 lg:pr-0"
       >
-        Seperti yang lo tau sendiri ya, tool ini tuh nggak ada apa-apanya.
-        Barangkali lo udah serius gitu butuh tool untuk sosial media, maka dari
-        itu kita kasih 2 alternatif yang bisa lo pake untuk sosial media lo.
+        Seperti yang kamu tau, kami cuma cowo" biasa. Barangkali kamu udah
+        serius cari cowo, maka lebih baik cari cowo lain.
       </p>
     </div>
     <!-- end header -->

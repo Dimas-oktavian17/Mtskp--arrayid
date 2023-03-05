@@ -1,12 +1,22 @@
+<script>
+export default {
+  name: "footerVue",
+  components: {},
+  props: {
+    title: String,
+  },
+};
+</script>
 <template>
   <!-- footer section -->
   <div
-    class="container flex flex-col items-center mt-20 p-20 gap-[30px] bg-white rounded-tl-3xl rounded-tr-3xl"
+    class="container flex flex-col items-center mt-20 p-20 gap-[30px] bg-gradient-to-r from-slate-50 to-slate-100 rounded-tl-3xl rounded-tr-3xl"
   >
     <div class="flex flex-col items-start gap-[30px] lg:flex-row">
       <div class="flex flex-col items-start gap-5 lg:w-[27rem] lg:gap-2">
-        <div class="flex flex-row items-center gap-[10px]">
+        <div class="flex flex-row items-center gap-[10px] group cursor-pointer">
           <svg
+            class="transition-all delay-1000 group-hover:animate-ping"
             width="50"
             height="50"
             viewBox="0 0 50 50"
@@ -26,13 +36,15 @@
             />
           </svg>
           <h1
-            class="text-2xl order-1 text-left font-bold font-header text-homePrimary"
-          ></h1>
+            class="order-1 text-2xl font-bold text-left font-header text-homePrimary"
+            :title="title"
+          >
+            {{ title }}
+          </h1>
         </div>
-        <p class="order-1 text-lg text-homePrimary font-normal font-header">
-          Sebenernya banyak banget aplikasi chatting yang lebih bagus dari ini,
-          maka dari itu lebih baik pake yang lain aja deh ya daripada pake
-          aplikasi yang ini.
+        <p class="order-1 text-lg font-normal text-homePrimary font-header">
+          Sebenernya banyak banget cowo yang lebih bagus dari okta, maka dari
+          itu lebih baik pilih cowo lain aja.
         </p>
         <p
           class="order-2 text-sm font-semibold tracking-widest font-header text-homePrimary"
@@ -42,7 +54,7 @@
         <p
           class="order-2 text-sm font-semibold tracking-widest font-header text-homePrimary"
         >
-          COPYRIGHT (C) 2022. CREATE BY OKTA
+          COPYRIGHT (C) 2023. CREATE BY OKTA
         </p>
       </div>
       <div class="flex flex-col items-start flex-grow order-1 gap-4 lg:gap-2">
@@ -53,16 +65,13 @@
               <a href="#beranda">Beranda</a>
             </li>
             <li class="text-base font-normal font-header text-homePrimary">
-              <a href="#fitur">Fitur-fitur</a>
+              <a href="#features">Features</a>
             </li>
             <li class="text-base font-normal font-header text-homePrimary">
-              <a href="#teknologi">Teknologi</a>
+              <a href="#reasons">Reasons</a>
             </li>
             <li class="text-base font-normal font-header text-homePrimary">
-              <a href="#about">About</a>
-            </li>
-            <li class="text-base font-normal font-header text-homePrimary">
-              <a href="#faq">FAQ</a>
+              <a href="#alternatives">Alternatives</a>
             </li>
           </ul>
         </div>
@@ -74,51 +83,30 @@
         <p
           class="self-stretch order-1 text-base font-normal font-header text-homePrimary"
         >
-          Lihat kami pansos di sosial media berikut:
+          Lihat sosial media kami berikut:
         </p>
         <div
-          class="flex flex-row justify-center items-center gap-[10px] order-2"
+          class="flex flex-row justify-self-center items-center gap-[10px] order-2"
         >
           <div
             class="group flex flex-row justify-center items-center p-2 gap-[10px] w-10 h-10 bg-bg-icon rounded-md cursor-pointer transition-all duration-1000"
           >
-            <a
-              href="https://www.instagram.com/dimas_okr/?hl=id"
-              target="_blank"
-            >
+            <a href="https://t.me/DmsOkr" target="_blank">
               <svg
-                class="group-hover:fill-white"
+                xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                class="transition-all bi bi-telegram group-hover:fill-white"
+                viewBox="0 0 16 16"
               >
                 <path
-                  d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z"
-                  stroke="#0C1B4D"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M16 11.3698C16.1234 12.2021 15.9813 13.052 15.5938 13.7988C15.2063 14.5456 14.5932 15.1512 13.8416 15.5295C13.0901 15.9077 12.2385 16.0394 11.4078 15.9057C10.5771 15.7721 9.80977 15.3799 9.21485 14.785C8.61993 14.1901 8.22774 13.4227 8.09408 12.592C7.96042 11.7614 8.09208 10.9097 8.47034 10.1582C8.8486 9.40667 9.4542 8.79355 10.201 8.40605C10.9478 8.01856 11.7978 7.8764 12.63 7.99981C13.4789 8.1257 14.2649 8.52128 14.8717 9.12812C15.4785 9.73496 15.8741 10.5209 16 11.3698Z"
-                  stroke="#0C1B4D"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17.5 6.5H17.51"
-                  stroke="#0C1B4D"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"
                 />
               </svg>
             </a>
           </div>
-          <div
+          <!-- <div
             class="group flex flex-row justify-center items-center p-2 gap-[10px] w-10 h-10 bg-bg-icon rounded-md transition-all duration-1000 cursor-pointer"
           >
             <a
@@ -181,7 +169,7 @@
                 </defs>
               </svg>
             </a>
-          </div>
+          </div> -->
           <div
             class="group flex flex-row justify-center items-center p-2 gap-[10px] w-10 h-10 bg-bg-icon rounded-md transition-all duration-1000 cursor-pointer"
           >
@@ -191,7 +179,7 @@
                 width="24"
                 height="24"
                 fill="currentColor"
-                class="bi bi-github group-hover:fill-white"
+                class="transition-all bi bi-github group-hover:fill-white"
                 viewBox="0 0 16 16"
               >
                 <path
