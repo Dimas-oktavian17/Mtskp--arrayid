@@ -100,7 +100,7 @@ export default {
             <div class="flex flex-col items-end">
               <p
                 :class="{
-                  ' origin-bottom-left rotate-[0deg] bg-slate-300 transition duration-1000 ease-in-out w-[30px] h-2 rounded-lg':
+                  ' origin-bottom-left rotate-0 bg-slate-300 transition duration-1000 ease-in-out w-[30px] h-2 rounded-lg':
                     navOpen,
                 }"
                 class="origin-bottom-left rotate-[45deg] w-[40px] h-2 bg-slate-300 rounded-lg duration-1000 ease-in-out"
@@ -108,7 +108,7 @@ export default {
 
               <p
                 :class="{
-                  ' origin-top-right rotate-[0deg] w-4 h-2 my-1 transition duration-1000 ease-in-out rounded-lg bg-slate-300':
+                  ' origin-top-right rotate-0 w-4 h-2 my-1 transition duration-1000 ease-in-out rounded-lg bg-slate-300':
                     navOpen,
                 }"
                 class="w-4 h-2 my-1 transition duration-1000 ease-in-out origin-right scale-100 rotate-45 rounded-lg bg-slate-300"
