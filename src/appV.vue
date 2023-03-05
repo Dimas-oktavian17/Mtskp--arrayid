@@ -87,7 +87,7 @@ export default {
     let user = localStorage.getItem("username");
     let sandi = localStorage.getItem("pw");
 
-    if (user === "admin" && sandi === "admin") {
+    if (user === "mslove" && sandi === "mslove123") {
       localStorage.setItem("role", "admin");
       let loaded = setInterval(() => {
         animate.classList.remove("hidden");

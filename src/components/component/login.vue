@@ -16,7 +16,10 @@ export default {
       // localStorage.setItem("data", JSON.stringify(this.user));
       localStorage.setItem("username", this.user.username);
       localStorage.setItem("pw", this.user.password);
-      if (this.user.username === "admin" && this.user.password === "admin") {
+      if (
+        this.user.username === "mslove" &&
+        this.user.password === "mslove123"
+      ) {
         localStorage.setItem("role", "admin");
         fo.classList.add("hidden");
         main.classList.remove("hidden");
@@ -33,7 +36,7 @@ export default {
     let user = localStorage.getItem("username");
     let sandi = localStorage.getItem("pw");
 
-    if (user === "admin" && sandi === "admin") {
+    if (user === "mslove" && sandi === "mslove123") {
       localStorage.setItem("role", "admin");
       login.classList.add("hidden");
       main.classList.remove("hidden");
