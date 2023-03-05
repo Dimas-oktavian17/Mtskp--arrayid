@@ -1,42 +1,36 @@
 <script>
-// import Flicking from "@egjs/vue3-flicking";
-// import "@egjs/vue3-flicking/dist/flicking.css";
-// // import { AutoPlay } from "@egjs/vue3-flicking";
+import { ref } from "vue";
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
 
-// export default {
-//   components: {
-//     Flicking,
-//   },
-//   data() {
-//     return {
-//       plugins: [new AutoPlay()],
-//     };
-//   },
-// };
+// // Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/pagination";
+
+import "../assets/swipper.css";
+
+// import required modules
+import { Pagination } from "swiper";
+
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Pagination],
+    };
+  },
+};
 </script>
 <template>
   <!-- wrapper feature -->
   <div
-    class="container flex flex-col lg:flex-row items-center py-[6.25rem] gap-[8.188rem]"
+    class="container flex flex-col lg:flex-row items-center py-[6.25rem] gap-[8.188rem] scroll-mt-[3rem]"
+    id="features"
   >
-    <!-- <flicking>
-      <div class="flicking-panel">1</div>
-      <div class="flicking-panel nested-wide">
-        <flicking :options="{ bounce: 0, bound: true, nested: true }">
-          <div class="flicking-panel">2.1</div>
-          <div class="flicking-panel">2.2</div>
-          <div class="flicking-panel">2.3</div>
-        </flicking>
-      </div>
-      <div class="flicking-panel nested-wide vertical">
-        <flicking :options="{ bounce: 0, bound: true, horizontal: false }">
-          <div class="flicking-panel">3.1</div>
-          <div class="flicking-panel">3.2</div>
-          <div class="flicking-panel">3.3</div>
-        </flicking>
-      </div>
-      <div class="flicking-panel">4</div>
-    </flicking> -->
     <!-- wrapper deskripsi -->
     <div class="flex flex-col items-start w-full lg:w-2/5 lg:pl-10 xl:pl-0">
       <!-- header -->
@@ -66,18 +60,18 @@
       <h2
         class="order-2 pb-5 pl-10 text-4xl font-bold lg:pl-0 font-header text-homePrimary xl:w-[29rem]"
       >
-        Kenapa Kami Tidak Memberikan Insight Apapun?
+        Kenapa Kamu Harus Pilih Okta?
       </h2>
       <!-- deskripsi -->
       <p
-        class="xl:w-[29rem] order-4 text-base font-normal pl-10 pr-8 lg:pl-0 font-header text-homePrimary opacity-60 pb-[3.125rem]"
+        class="order-4 text-base font-normal pl-10 pr-8 lg:pl-0 font-header text-homePrimary opacity-60 pb-[3.125rem]"
       >
-        Di sini kita akan klarifikasi mengapa kita tidak memberikan insight
-        apapun di tool ini kepada kamu. Pada dasarnya hal ini kami lakukan
-        semata-mata ingin menyelamatkan planet bumi.
+        Di sini kita akan klarifikasi mengapa kamu harus memilih okta, ngga
+        wajib sih. Masih mau baca?, yaudah ini penjelasan'nya.
       </p>
       <!-- button -->
-      <button
+
+      <a
         class="text-base font-bold font-main text-secondary2 flex flex-row justify-between items-center ml-10 lg:ml-0 py-3 lg:py-5 px-5 lg:px-[1.875rem] bg-homePrimary rounded-full order-6 shadow-btnfeature group transition-all hover:pr-8 hover:opacity-95"
       >
         Pelajari Lebih Lanjut
@@ -111,10 +105,10 @@
             stroke-linejoin="round"
           />
         </svg>
-      </button>
+      </a>
     </div>
     <!-- wrapper fitur -->
-    <div class="flex flex-col items-start w-full p-4 lg:w-3/5 lg:p-0">
+    <div class="flex-col items-start hidden w-full p-4 lg:flex lg:w-3/5 lg:p-0">
       <!-- top feature -->
       <div class="flex flex-row items-start gap-[1px]">
         <!-- box one -->
@@ -128,48 +122,31 @@
               class="flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem] bg-[#FFFFFF08]"
             >
               <svg
+                xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+                fill="white"
+                class="bi bi-lightbulb"
+                viewBox="0 0 16 16"
               >
                 <path
-                  d="M10 6.66663C14.1421 6.66663 17.5 5.54734 17.5 4.16663C17.5 2.78591 14.1421 1.66663 10 1.66663C5.85786 1.66663 2.5 2.78591 2.5 4.16663C2.5 5.54734 5.85786 6.66663 10 6.66663Z"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17.5 10C17.5 11.3833 14.1667 12.5 10 12.5C5.83333 12.5 2.5 11.3833 2.5 10"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M2.5 4.16663V15.8333C2.5 17.2166 5.83333 18.3333 10 18.3333C14.1667 18.3333 17.5 17.2166 17.5 15.8333V4.16663"
-                  stroke="white"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"
                 />
               </svg>
             </div>
             <h1 class="order-1 text-base font-semibold text-white font-header">
-              Database
+              Insightful
             </h1>
           </div>
           <!-- deskripsi -->
           <p class="order-1 text-base font-normal text-white">
-            Data insight yang banyak kan bakal disimpen di database, ya kalo
-            datanya banyak kan jadi gede juga size database-nya.
+            Terdengar narsis?, terserah persepsi kamu. Dengan pengetahuan
+            mungkin kami bisa berbagi & membantu'mu meskipun random.
           </p>
         </div>
         <!-- box two -->
         <div
-          class="flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
+          class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
         >
           <!-- header -->
           <div class="flex flex-row items-center gap-[1.313rem]">
@@ -178,65 +155,37 @@
               class="group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]"
             >
               <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#FC881D"
+                class="group-hover:fill-white"
+                height="20px"
+                width="20px"
+                version="1.1"
+                id="Capa_1"
+                viewBox="0 0 612.001 612.001"
+                xml:space="preserve"
               >
-                <g clip-path="url(#clip0_4_357)">
+                <g>
                   <path
-                    d="M16.6667 1.66663H3.33335C2.41288 1.66663 1.66669 2.41282 1.66669 3.33329V6.66663C1.66669 7.5871 2.41288 8.33329 3.33335 8.33329H16.6667C17.5872 8.33329 18.3334 7.5871 18.3334 6.66663V3.33329C18.3334 2.41282 17.5872 1.66663 16.6667 1.66663Z"
-                    stroke="#FC881D"
-                    class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M16.6667 11.6666H3.33335C2.41288 11.6666 1.66669 12.4128 1.66669 13.3333V16.6666C1.66669 17.5871 2.41288 18.3333 3.33335 18.3333H16.6667C17.5872 18.3333 18.3334 17.5871 18.3334 16.6666V13.3333C18.3334 12.4128 17.5872 11.6666 16.6667 11.6666Z"
-                    stroke="#FC881D"
-                    class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5 5H5.00833"
-                    stroke="#FC881D"
-                    class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5 15H5.00833"
-                    stroke="#FC881D"
-                    class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    d="M542.346,235.523c-6.647-76.801-52.108-147.626-115.793-190.052c-34.9-23.249-75.336-37.519-116.84-42.917   C195.319-12.325,74.841,37.92,31.685,150.284c-37.099,96.597-0.52,192.495,65.913,265.632   c23.974,26.393,27.298,76.017,27.298,109.446v67.792c0,10.408,8.438,18.846,18.846,18.846h245.301   c9.929,0,18.135-7.704,18.806-17.61c0.903-13.335,2.386-25.062,2.386-25.062c5.129-21.996,23.884-39.634,63.768-33.231   c41.844,6.713,68.237-5.756,70.584-33.617c0.774-9.191,1.273-87.695,1.273-87.695c1.999-1.142,15.117-3.75,34.236-8.097   c14.867-3.38,20.103-21.838,9.263-32.561c-43.469-43.001-49.299-63.047-50.378-67.362   C533.598,285.327,544.296,258.049,542.346,235.523z M461.327,209.858c-6.039,7.651-12.918,9.146-16.556,9.346   c-1.198,0.066-2.033,1.206-1.706,2.36c1.868,6.582,3.768,24.711-28.687,31.77c-30.438,6.615-48.844,30.29-60.863,42.313   c-9.233,9.225-21.723,13.495-34.183,16.299c-12.729,2.864-25.341,5.37-35.384,14.415c-10.577,9.527-25.495,61.985-28.027,71.104   c-0.222,0.801-0.951,1.352-1.783,1.352h-15.621c-0.877,0-1.636-0.614-1.817-1.473l-7.569-35.803   c-0.318-1.504-73.698,4.534-79.347-28.22c-0.198-1.149-1.359-1.862-2.456-1.466c-7.056,2.546-29.692,8.81-41.91-10.122   c-8.663-13.423-6.362-25.955-5.155-30.282c0.25-0.896-0.2-1.828-1.055-2.196c-6.225-2.677-28.719-15.289-25.669-56.784   c2.461-33.448,25.085-48.273,21.922-53.417c-9.124-14.837-1.193-39.431,17.5-44.921c0.753-0.221,1.288-0.888,1.359-1.67   l0.789-8.719c2.596-30.743,42.991-50.226,70.455-37.445c1.059,0.493,2.318-0.032,2.67-1.145   c3.438-10.898,10.377-13.898,12.226-14.938c8.515-4.791,19.572-4.199,28.374-0.586c0.712,0.292,1.523,0.114,2.048-0.448   c2.501-2.679,12.756-11.182,29.739-11.182c17.42,0,26.275,8.465,29.371,10.835c0.569,0.435,1.334,0.513,1.972,0.188   c3.919-2.004,18.228-8.411,32.554-3.476c10.818,3.732,16.959,13.578,18.893,17.161c0.413,0.766,1.281,1.157,2.128,0.957   c5.137-1.217,22.902-4.629,37.827,2.111c15.772,7.13,20.693,17.433,21.948,20.887c0.255,0.703,0.914,1.174,1.662,1.204   c3.42,0.136,12.858,0.964,18.691,5.866c10.3,8.66,9.294,15.488,8.108,18.41c-0.361,0.89,0.038,1.91,0.901,2.333   c4.704,2.307,17.892,9.927,26.073,26.112C472.011,182.884,467.505,202.031,461.327,209.858z"
                   />
                 </g>
-                <defs>
-                  <clipPath id="clip0_4_357">
-                    <rect width="20" height="20" fill="white" />
-                  </clipPath>
-                </defs>
               </svg>
             </div>
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Database
+              Open Minded
             </h1>
           </div>
           <!-- deskripsi -->
           <p
             class="order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000"
           >
-            Data insight yang banyak kan bakal disimpen di database, ya kalo
-            datanya banyak kan jadi gede juga size database-nya.
+            Apa benar?, tentu. Kami siap menerima masukan & saran jika itu
+            bermanfaat & selalu sedia jika kamu ingin diskusi penting atau
+            random.
           </p>
         </div>
       </div>
@@ -244,7 +193,7 @@
       <div class="flex flex-row items-start gap-[1px]">
         <!-- box three -->
         <div
-          class="flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
+          class="w-1/2 flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
         >
           <!-- header -->
           <div class="flex flex-row items-center gap-[1.313rem]">
@@ -259,64 +208,33 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_4_357)">
-                  <path
-                    d="M16.6667 1.66663H3.33335C2.41288 1.66663 1.66669 2.41282 1.66669 3.33329V6.66663C1.66669 7.5871 2.41288 8.33329 3.33335 8.33329H16.6667C17.5872 8.33329 18.3334 7.5871 18.3334 6.66663V3.33329C18.3334 2.41282 17.5872 1.66663 16.6667 1.66663Z"
-                    stroke="#FC881D"
-                    class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M16.6667 11.6666H3.33335C2.41288 11.6666 1.66669 12.4128 1.66669 13.3333V16.6666C1.66669 17.5871 2.41288 18.3333 3.33335 18.3333H16.6667C17.5872 18.3333 18.3334 17.5871 18.3334 16.6666V13.3333C18.3334 12.4128 17.5872 11.6666 16.6667 11.6666Z"
-                    stroke="#FC881D"
-                    class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5 5H5.00833"
-                    stroke="#FC881D"
-                    class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5 15H5.00833"
-                    stroke="#FC881D"
-                    class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <clipPath id="clip0_4_357">
-                    <rect width="20" height="20" fill="white" />
-                  </clipPath>
-                </defs>
+                <path
+                  d="M10.8333 1.66663L2.5 11.6666H10L9.16667 18.3333L17.5 8.33329H10L10.8333 1.66663Z"
+                  stroke="#FC881D"
+                  class="group-hover:stroke-white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </div>
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Database
+              Encourage
             </h1>
           </div>
           <!-- deskripsi -->
           <p
             class="order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000"
           >
-            Data insight yang banyak kan bakal disimpen di database, ya kalo
-            datanya banyak kan jadi gede juga size database-nya.
+            Waktu selalu berputar, lalu?. Kami selalu berusaha mendorong diri
+            kamu, untuk berkembang & berubah kearah yang lebih baik.
           </p>
         </div>
         <!-- box four -->
         <div
-          class="flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
+          class="w-1/2 flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
         >
           <!-- header -->
           <div class="flex flex-row items-center gap-[1.313rem]">
@@ -331,9 +249,9 @@
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
-                <g clip-path="url(#clip0_4_357)">
+                <g clip-path="url(#clip0_4_366)">
                   <path
-                    d="M16.6667 1.66663H3.33335C2.41288 1.66663 1.66669 2.41282 1.66669 3.33329V6.66663C1.66669 7.5871 2.41288 8.33329 3.33335 8.33329H16.6667C17.5872 8.33329 18.3334 7.5871 18.3334 6.66663V3.33329C18.3334 2.41282 17.5872 1.66663 16.6667 1.66663Z"
+                    d="M10 18.3333C14.6024 18.3333 18.3334 14.6023 18.3334 9.99996C18.3334 5.39759 14.6024 1.66663 10 1.66663C5.39765 1.66663 1.66669 5.39759 1.66669 9.99996C1.66669 14.6023 5.39765 18.3333 10 18.3333Z"
                     stroke="#FC881D"
                     class="group-hover:stroke-white"
                     stroke-width="2"
@@ -341,32 +259,24 @@
                     stroke-linejoin="round"
                   />
                   <path
-                    d="M16.6667 11.6666H3.33335C2.41288 11.6666 1.66669 12.4128 1.66669 13.3333V16.6666C1.66669 17.5871 2.41288 18.3333 3.33335 18.3333H16.6667C17.5872 18.3333 18.3334 17.5871 18.3334 16.6666V13.3333C18.3334 12.4128 17.5872 11.6666 16.6667 11.6666Z"
-                    stroke="#FC881D"
                     class="group-hover:stroke-white"
+                    d="M1.66669 10H18.3334"
+                    stroke="#FC881D"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                   <path
-                    d="M5 5H5.00833"
-                    stroke="#FC881D"
                     class="group-hover:stroke-white"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5 15H5.00833"
+                    d="M10 1.66663C12.0844 3.94859 13.269 6.90999 13.3334 9.99996C13.269 13.0899 12.0844 16.0513 10 18.3333C7.91562 16.0513 6.73106 13.0899 6.66669 9.99996C6.73106 6.90999 7.91562 3.94859 10 1.66663V1.66663Z"
                     stroke="#FC881D"
-                    class="group-hover:stroke-white"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
                   />
                 </g>
                 <defs>
-                  <clipPath id="clip0_4_357">
+                  <clipPath id="clip0_4_366">
                     <rect width="20" height="20" fill="white" />
                   </clipPath>
                 </defs>
@@ -375,19 +285,210 @@
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Database
+              Environment
             </h1>
           </div>
           <!-- deskripsi -->
           <p
             class="order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000"
           >
-            Data insight yang banyak kan bakal disimpen di database, ya kalo
-            datanya banyak kan jadi gede juga size database-nya.
+            toxic relationship?, katakan tidak. Lingkungan relationship
+            merupakan suatu hal yang penting, kami selalu mendukung apapun
+            keputusan & tindakan jika itu positif.
           </p>
         </div>
       </div>
     </div>
+    <!-- swipper mobile mode -->
+    <swiper class="flex flex-col items-start lg:hidden">
+      <swiper-slide>
+        <div
+          class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]"
+        >
+          <!-- header -->
+          <div class="flex flex-row items-center gap-[1.313rem]">
+            <!-- icon -->
+            <div
+              class="flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem] bg-[#FFFFFF08]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="white"
+                class="bi bi-lightbulb"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1z"
+                />
+              </svg>
+            </div>
+            <h1 class="order-1 text-base font-semibold text-white font-header">
+              Insightful
+            </h1>
+          </div>
+          <!-- deskripsi -->
+          <p class="order-1 text-base font-normal text-white">
+            Terdengar narsis?, terserah persepsi kamu. Dengan pengetahuan
+            mungkin kami bisa berbagi & membantu'mu meskipun random.
+          </p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
+        >
+          <!-- header -->
+          <div class="flex flex-row items-center gap-[1.313rem]">
+            <!-- icon -->
+            <div
+              class="group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                fill="#FC881D"
+                class="group-hover:fill-white"
+                height="20px"
+                width="20px"
+                version="1.1"
+                id="Capa_1"
+                viewBox="0 0 612.001 612.001"
+                xml:space="preserve"
+              >
+                <g>
+                  <path
+                    d="M542.346,235.523c-6.647-76.801-52.108-147.626-115.793-190.052c-34.9-23.249-75.336-37.519-116.84-42.917   C195.319-12.325,74.841,37.92,31.685,150.284c-37.099,96.597-0.52,192.495,65.913,265.632   c23.974,26.393,27.298,76.017,27.298,109.446v67.792c0,10.408,8.438,18.846,18.846,18.846h245.301   c9.929,0,18.135-7.704,18.806-17.61c0.903-13.335,2.386-25.062,2.386-25.062c5.129-21.996,23.884-39.634,63.768-33.231   c41.844,6.713,68.237-5.756,70.584-33.617c0.774-9.191,1.273-87.695,1.273-87.695c1.999-1.142,15.117-3.75,34.236-8.097   c14.867-3.38,20.103-21.838,9.263-32.561c-43.469-43.001-49.299-63.047-50.378-67.362   C533.598,285.327,544.296,258.049,542.346,235.523z M461.327,209.858c-6.039,7.651-12.918,9.146-16.556,9.346   c-1.198,0.066-2.033,1.206-1.706,2.36c1.868,6.582,3.768,24.711-28.687,31.77c-30.438,6.615-48.844,30.29-60.863,42.313   c-9.233,9.225-21.723,13.495-34.183,16.299c-12.729,2.864-25.341,5.37-35.384,14.415c-10.577,9.527-25.495,61.985-28.027,71.104   c-0.222,0.801-0.951,1.352-1.783,1.352h-15.621c-0.877,0-1.636-0.614-1.817-1.473l-7.569-35.803   c-0.318-1.504-73.698,4.534-79.347-28.22c-0.198-1.149-1.359-1.862-2.456-1.466c-7.056,2.546-29.692,8.81-41.91-10.122   c-8.663-13.423-6.362-25.955-5.155-30.282c0.25-0.896-0.2-1.828-1.055-2.196c-6.225-2.677-28.719-15.289-25.669-56.784   c2.461-33.448,25.085-48.273,21.922-53.417c-9.124-14.837-1.193-39.431,17.5-44.921c0.753-0.221,1.288-0.888,1.359-1.67   l0.789-8.719c2.596-30.743,42.991-50.226,70.455-37.445c1.059,0.493,2.318-0.032,2.67-1.145   c3.438-10.898,10.377-13.898,12.226-14.938c8.515-4.791,19.572-4.199,28.374-0.586c0.712,0.292,1.523,0.114,2.048-0.448   c2.501-2.679,12.756-11.182,29.739-11.182c17.42,0,26.275,8.465,29.371,10.835c0.569,0.435,1.334,0.513,1.972,0.188   c3.919-2.004,18.228-8.411,32.554-3.476c10.818,3.732,16.959,13.578,18.893,17.161c0.413,0.766,1.281,1.157,2.128,0.957   c5.137-1.217,22.902-4.629,37.827,2.111c15.772,7.13,20.693,17.433,21.948,20.887c0.255,0.703,0.914,1.174,1.662,1.204   c3.42,0.136,12.858,0.964,18.691,5.866c10.3,8.66,9.294,15.488,8.108,18.41c-0.361,0.89,0.038,1.91,0.901,2.333   c4.704,2.307,17.892,9.927,26.073,26.112C472.011,182.884,467.505,202.031,461.327,209.858z"
+                  />
+                </g>
+              </svg>
+            </div>
+            <h1
+              class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
+            >
+              Open Minded
+            </h1>
+          </div>
+          <!-- deskripsi -->
+          <p
+            class="order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000"
+          >
+            Apa benar?, tentu. Kami siap menerima masukan & saran jika itu
+            bermanfaat & selalu sedia jika kamu ingin diskusi penting atau
+            random.
+          </p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
+        >
+          <!-- header -->
+          <div class="flex flex-row items-center gap-[1.313rem]">
+            <!-- icon -->
+            <div
+              class="group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="group-hover:stroke-white"
+                  d="M10.8333 1.66663L2.5 11.6666H10L9.16667 18.3333L17.5 8.33329H10L10.8333 1.66663Z"
+                  stroke="#FC881D"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <h1
+              class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
+            >
+              Encourage
+            </h1>
+          </div>
+          <!-- deskripsi -->
+          <p
+            class="order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000"
+          >
+            Waktu selalu berputar, lalu?. Kami selalu berusaha mendorong diri
+            kamu, untuk berkembang & berubah kearah yang lebih baik.
+          </p>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
+        >
+          <!-- header -->
+          <div class="flex flex-row items-center gap-[1.313rem]">
+            <!-- icon -->
+            <div
+              class="group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_4_366)">
+                  <path
+                    class="group-hover:stroke-white"
+                    d="M10 18.3333C14.6024 18.3333 18.3334 14.6023 18.3334 9.99996C18.3334 5.39759 14.6024 1.66663 10 1.66663C5.39765 1.66663 1.66669 5.39759 1.66669 9.99996C1.66669 14.6023 5.39765 18.3333 10 18.3333Z"
+                    stroke="#FC881D"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    class="group-hover:stroke-white"
+                    d="M1.66669 10H18.3334"
+                    stroke="#FC881D"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    class="group-hover:stroke-white"
+                    d="M10 1.66663C12.0844 3.94859 13.269 6.90999 13.3334 9.99996C13.269 13.0899 12.0844 16.0513 10 18.3333C7.91562 16.0513 6.73106 13.0899 6.66669 9.99996C6.73106 6.90999 7.91562 3.94859 10 1.66663V1.66663Z"
+                    stroke="#FC881D"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_4_366">
+                    <rect width="20" height="20" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h1
+              class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
+            >
+              Environment
+            </h1>
+          </div>
+          <!-- deskripsi -->
+          <p
+            class="order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000"
+          >
+            toxic relationship?, katakan tidak. Lingkungan relationship
+            merupakan suatu hal yang penting, kami selalu mendukung apapun
+            keputusan & tindakan jika itu positif.
+          </p>
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
   <!-- end wrapper feature-->
 </template>
