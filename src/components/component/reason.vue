@@ -4,11 +4,11 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
-import "swiper/css";
+// import "swiper/css";
 
 // import "swiper/css/pagination";
 
-// import "../../assets/swipper.css";
+import "../../assets/swipper.css";
 
 // import required modules
 import { Pagination } from "swiper";
@@ -403,7 +403,7 @@ export default {
     </div>
     <!-- swipper active if in mobile web -->
     <swiper class="flex flex-col items-start lg:hidden">
-      <swiper-slide class="lg:hidden">
+      <swiper-slide>
         <!-- box one -->
         <div class="flex flex-col items-center gap-3 lg:items-start">
           <!-- svg -->
@@ -426,7 +426,7 @@ export default {
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="lg:hidden">
+      <swiper-slide>
         <!-- box one -->
         <div class="flex flex-col items-center gap-3">
           <!-- svg -->
@@ -730,7 +730,7 @@ export default {
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="lg:hidden">
+      <swiper-slide>
         <!-- box one -->
         <div class="flex flex-col items-center gap-3 lg:items-start">
           <!-- svg -->

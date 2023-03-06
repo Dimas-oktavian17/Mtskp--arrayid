@@ -4,11 +4,11 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // // Import Swiper styles
-import "swiper/css";
+// import "swiper/css";
 
 // import "swiper/css/pagination";
 
-// import "../assets/swipper.css";
+import "../assets/swipper.css";
 
 // import required modules
 import { Pagination } from "swiper";
@@ -301,7 +301,7 @@ export default {
     </div>
     <!-- swipper mobile mode -->
     <swiper class="flex flex-col items-start lg:hidden">
-      <swiper-slide class="lg:hidden">
+      <swiper-slide>
         <div
           class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]"
         >
@@ -335,7 +335,7 @@ export default {
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="lg:hidden">
+      <swiper-slide>
         <div
           class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
         >
@@ -380,7 +380,7 @@ export default {
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="lg:hidden">
+      <swiper-slide>
         <div
           class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
         >
@@ -422,7 +422,7 @@ export default {
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide class="lg:hidden">
+      <swiper-slide>
         <div
           class="max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
         >
