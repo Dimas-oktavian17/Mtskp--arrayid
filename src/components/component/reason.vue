@@ -4,7 +4,7 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
-// import "swiper/css";
+import "swiper/css";
 
 // import "swiper/css/pagination";
 
