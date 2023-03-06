@@ -62,7 +62,7 @@ export default {
         <div
           class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
         >
-          <img src="../../../public/image 1 (1).png" alt="love" />
+          <img src="../../assets/reason/love.png" alt="love" />
         </div>
         <!-- deskripsi -->
         <h1
@@ -385,7 +385,7 @@ export default {
         <div
           class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
         >
-          <img src="../../../public/image 1.png" alt="ayam" />
+          <img src="../../assets/reason/ayam.png" alt="ayam" />
         </div>
         <!-- deskripsi -->
         <h1
@@ -410,7 +410,7 @@ export default {
           <div
             class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
           >
-            <img src="../../../public/image 1 (1).png" alt="love" />
+            <img src="../../assets/reason/love.png" alt="love" />
           </div>
           <!-- deskripsi -->
           <h1
@@ -737,7 +737,7 @@ export default {
           <div
             class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
           >
-            <img src="../../../public/image 1.png" alt="ayam" />
+            <img src="../../assets/reason/ayam.png" alt="ayam" />
           </div>
           <!-- deskripsi -->
           <h1
