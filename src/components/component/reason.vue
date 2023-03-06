@@ -3,8 +3,8 @@ import { ref } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
-// // Import Swiper styles
-// import "swiper/css";
+// Import Swiper styles
+import "swiper/css";
 
 // import "swiper/css/pagination";
 
@@ -403,7 +403,7 @@ export default {
     </div>
     <!-- swipper active if in mobile web -->
     <swiper class="flex flex-col items-start lg:hidden">
-      <swiper-slide>
+      <swiper-slide class="lg:hidden">
         <!-- box one -->
         <div class="flex flex-col items-center gap-3 lg:items-start">
           <!-- svg -->
@@ -426,7 +426,7 @@ export default {
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide>
+      <swiper-slide class="lg:hidden">
         <!-- box one -->
         <div class="flex flex-col items-center gap-3">
           <!-- svg -->
@@ -730,7 +730,7 @@ export default {
           </p>
         </div>
       </swiper-slide>
-      <swiper-slide>
+      <swiper-slide class="lg:hidden">
         <!-- box one -->
         <div class="flex flex-col items-center gap-3 lg:items-start">
           <!-- svg -->
