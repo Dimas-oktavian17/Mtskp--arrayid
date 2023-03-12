@@ -23,6 +23,14 @@ export default {
       modules: [Pagination],
     };
   },
+  data() {
+    return {
+      titleFeature: "Kenapa Kamu Harus Pilih Okta?",
+    };
+  },
+  props: {
+    title: String,
+  },
 };
 </script>
 <template>
@@ -53,14 +61,17 @@ export default {
           />
         </svg>
         <!-- header text -->
-        <h1 class="text-base font-semibold font-header text-homeSecondary">
-          KENAPA SIH?
+        <h1
+          class="text-base font-semibold font-header text-homeSecondary"
+          :title="title"
+        >
+          {{ title }}
         </h1>
       </div>
       <h2
         class="order-2 pb-5 pl-10 text-4xl font-bold lg:pl-0 font-header text-homePrimary xl:w-[29rem]"
       >
-        Kenapa Kamu Harus Pilih Okta?
+        {{ titleFeature }}
       </h2>
       <!-- deskripsi -->
       <p

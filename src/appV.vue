@@ -35,6 +35,7 @@ export default {
   },
   data() {
     return {
+      headFeature: "KENAPA SIH?",
       text: "Expression",
       user: {
         username: "",
@@ -211,7 +212,7 @@ export default {
         class="absolute w-full lg:h-[130rem] h-[210rem] left-0 top-[1067px] bg-mainPrimary pt-[30rem]"
       >
         <!-- wrapper feature -->
-        <featureVue></featureVue>
+        <featureVue :title="headFeature"></featureVue>
         <!-- end wrapper feature-->
         <!-- wrapper reasons -->
         <reason></reason>
