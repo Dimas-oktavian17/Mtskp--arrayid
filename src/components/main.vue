@@ -15,6 +15,12 @@ export default {
     kinesisEnd,
     kinesisEndTwo,
   },
+  data() {
+    return {
+      Title: "Expression",
+      Head: "Sebuah Expression dari dalam diri, tapi binggung menyampaikanya!",
+    };
+  },
 };
 </script>
 <template>
@@ -43,12 +49,12 @@ export default {
       <h1
         class="pb-5 pl-10 font-semibold text-left xxs:text-xs sm:text-base lg:pl-0 lg:text-center font-header text-homeSecondary"
       >
-        Expression
+        {{ Title }}
       </h1>
       <h2
         class="order-2 pl-10 lg:px-24 xl:px-52 text-4xl sm:text-[3rem] leading-none font-normal lg:text-center text-left text-white font-header"
       >
-        Sebuah Expression dari dalam diri, tapi binggung menyampaikanya!
+        {{ Head }}
       </h2>
       <p
         class="pt-[2.125rem] pl-10 sm:pr-8 lg:px-32 xl:px-[16rem] font-header font-normal text-lg text-left lg:text-center text-white order-4 pb-[3.75rem]"
