@@ -23,13 +23,9 @@ export default {
       modules: [Pagination],
     };
   },
-  data() {
-    return {
-      titleFeature: "Kenapa Kamu Harus Pilih Okta?",
-    };
-  },
   props: {
-    title: String,
+    head: String,
+    titleFeature: String,
   },
 };
 </script>
@@ -63,12 +59,13 @@ export default {
         <!-- header text -->
         <h1
           class="text-base font-semibold font-header text-homeSecondary"
-          :title="title"
+          :head="head"
         >
-          {{ title }}
+          {{ head }}
         </h1>
       </div>
       <h2
+        :titleFeature="titleFeature"
         class="order-2 pb-5 pl-10 text-4xl font-bold lg:pl-0 font-header text-homePrimary xl:w-[29rem]"
       >
         {{ titleFeature }}

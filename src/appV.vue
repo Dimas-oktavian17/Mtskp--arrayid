@@ -36,6 +36,7 @@ export default {
   data() {
     return {
       headFeature: "KENAPA SIH?",
+      titleFeature: "Kenapa Kamu Harus Pilih Okta?",
       text: "Expression",
       user: {
         username: "",
@@ -212,7 +213,10 @@ export default {
         class="absolute w-full lg:h-[130rem] h-[210rem] left-0 top-[1067px] bg-mainPrimary pt-[30rem]"
       >
         <!-- wrapper feature -->
-        <featureVue :title="headFeature"></featureVue>
+        <featureVue
+          :titleFeature="titleFeature"
+          :head="headFeature"
+        ></featureVue>
         <!-- end wrapper feature-->
         <!-- wrapper reasons -->
         <reason></reason>
