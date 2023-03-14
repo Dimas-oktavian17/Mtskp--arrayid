@@ -97,10 +97,10 @@ export default {
             aria-expanded="false"
           >
             <span class="sr-only">Open main menu</span>
-            <div class="flex flex-col items-end">
+            <div class="flex flex-col items-end pr-4">
               <p
                 :class="{
-                  ' origin-bottom-left rotate-0 bg-slate-300 transition duration-1000 ease-in-out w-[30px] h-2 rounded-lg':
+                  ' origin-bottom-left rotate-[0deg] bg-slate-300 transition duration-1000 ease-in-out w-[30px] h-2 rounded-lg':
                     navOpen,
                 }"
                 class="origin-bottom-left rotate-[45deg] w-[40px] h-2 bg-slate-300 rounded-lg duration-1000 ease-in-out"
@@ -108,14 +108,14 @@ export default {
 
               <p
                 :class="{
-                  ' origin-top-right rotate-0 w-4 h-2 my-1 transition duration-1000 ease-in-out rounded-lg bg-slate-300':
+                  ' origin-top-right rotate-[0deg] w-4 h-2 my-1 transition duration-1000 ease-in-out rounded-lg bg-slate-300':
                     navOpen,
                 }"
                 class="w-4 h-2 my-1 transition duration-1000 ease-in-out origin-right scale-100 rotate-45 rounded-lg bg-slate-300"
               ></p>
               <p
                 :class="{
-                  'rotate-45 origin-top-right w-2 h-2 transition duration-1000 ease-in-out rounded-lg bg-slate-300':
+                  'rotate-[45deg] origin-top-right w-2 h-2 transition duration-1000 ease-in-out rounded-lg bg-slate-300':
                     navOpen,
                 }"
                 class="rotate-[45deg] origin-top-right w-[30px] h-2 transition duration-1000 ease-in-out rounded-lg bg-slate-300"
