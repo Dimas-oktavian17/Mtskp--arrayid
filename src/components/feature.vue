@@ -21,6 +21,12 @@ export default {
   setup() {
     return {
       modules: [Pagination],
+      boxMain: {
+        titleOne: "Insightful",
+        titleTwo: "Open Minded",
+        titleThree: "Encourage",
+        titleFour: "Environment",
+      },
     };
   },
   props: {
@@ -143,7 +149,7 @@ export default {
               </svg>
             </div>
             <h1 class="order-1 text-base font-semibold text-white font-header">
-              Insightful
+              {{ boxMain.titleOne }}
             </h1>
           </div>
           <!-- deskripsi -->
@@ -184,7 +190,7 @@ export default {
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Open Minded
+              {{ boxMain.titleTwo }}
             </h1>
           </div>
           <!-- deskripsi -->
@@ -229,7 +235,7 @@ export default {
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Encourage
+              {{ boxMain.titleThree }}
             </h1>
           </div>
           <!-- deskripsi -->
@@ -293,7 +299,7 @@ export default {
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Environment
+              {{ boxMain.titleFour }}
             </h1>
           </div>
           <!-- deskripsi -->
@@ -332,8 +338,11 @@ export default {
                 />
               </svg>
             </div>
-            <h1 class="order-1 text-base font-semibold text-white font-header">
-              Insightful
+            <h1
+              :titleBox="titleBox"
+              class="order-1 text-base font-semibold text-white font-header"
+            >
+              {{ titleBox }}
             </h1>
           </div>
           <!-- deskripsi -->
