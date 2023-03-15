@@ -35,12 +35,18 @@ export default {
   },
   data() {
     return {
-      headFeature: "KENAPA SIH?",
-      titleFeature: "Kenapa Kamu Harus Pilih Okta?",
+      dataFeature: {
+        head: "KENAPA SIH?",
+        title: "Kenapa Kamu Harus Pilih Okta?",
+      },
       text: "Expression",
       user: {
         username: "",
         password: "",
+      },
+      dataReason: {
+        head: "TERUS GIMANA?",
+        title: "Terus Ngapain Dong Kalo Nggak Wajib Milih?",
       },
     };
   },
@@ -214,12 +220,15 @@ export default {
       >
         <!-- wrapper feature -->
         <featureVue
-          :titleFeature="titleFeature"
-          :head="headFeature"
+          :headFeature="dataFeature.head"
+          :titleFeature="dataFeature.title"
         ></featureVue>
         <!-- end wrapper feature-->
         <!-- wrapper reasons -->
-        <reason></reason>
+        <reason
+          :headReason="dataReason.head"
+          :titleReason="dataReason.title"
+        ></reason>
         <!-- end wrapper reasons -->
       </div>
 

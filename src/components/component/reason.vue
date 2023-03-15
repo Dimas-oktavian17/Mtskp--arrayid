@@ -23,6 +23,10 @@ export default {
       modules: [Pagination],
     };
   },
+  props: {
+    headReason: String,
+    titleReason: String,
+  },
 };
 </script>
 <template>
@@ -34,14 +38,16 @@ export default {
     <!-- head wrapper -->
     <div class="flex flex-col items-start pl-10 lg:items-center">
       <h1
+        :headReason="headReason"
         class="lg:text-center text-left text-base font-semibold font-header text-homeSecondary pb-[0.625rem]"
       >
-        TERUS GIMANA?
+        {{ headReason }}
       </h1>
       <h2
+        :titleReason="titleReason"
         class="order-2 pb-5 text-4xl font-bold lg:text-center font-header text-homePrimary lg:px-52"
       >
-        Terus Ngapain Dong Kalo Nggak Wajib Milih?
+        {{ titleReason }}
       </h2>
       <p
         class="order-3 text-base text-left lg:text-center font-header text-homePrimary opacity-60 lg:px-56"

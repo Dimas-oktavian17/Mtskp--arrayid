@@ -30,7 +30,7 @@ export default {
     };
   },
   props: {
-    head: String,
+    headFeature: String,
     titleFeature: String,
   },
 };
@@ -65,9 +65,9 @@ export default {
         <!-- header text -->
         <h1
           class="text-base font-semibold font-header text-homeSecondary"
-          :head="head"
+          :headFeature="headFeature"
         >
-          {{ head }}
+          {{ headFeature }}
         </h1>
       </div>
       <h2
@@ -338,11 +338,8 @@ export default {
                 />
               </svg>
             </div>
-            <h1
-              :titleBox="titleBox"
-              class="order-1 text-base font-semibold text-white font-header"
-            >
-              {{ titleBox }}
+            <h1 class="order-1 text-base font-semibold text-white font-header">
+              {{ boxMain.titleOne }}
             </h1>
           </div>
           <!-- deskripsi -->
@@ -384,7 +381,7 @@ export default {
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Open Minded
+              {{ boxMain.titleTwo }}
             </h1>
           </div>
           <!-- deskripsi -->
@@ -427,7 +424,7 @@ export default {
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Encourage
+              {{ boxMain.titleThree }}
             </h1>
           </div>
           <!-- deskripsi -->
@@ -492,7 +489,7 @@ export default {
             <h1
               class="order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000"
             >
-              Environment
+              {{ boxMain.titleFour }}
             </h1>
           </div>
           <!-- deskripsi -->
