@@ -8,6 +8,20 @@ export default {
   data() {
     return {
       navOpen: true,
+      menus: [
+        {
+          menu: "Features",
+          url: "#features",
+        },
+        {
+          menu: "Reasons",
+          url: "#reasons",
+        },
+        {
+          menu: "Alternatives",
+          url: "#alternatives",
+        },
+      ],
     };
   },
   props: {
@@ -142,31 +156,13 @@ export default {
                 Beranda
               </a>
             </li>
-            <li>
+            <li v-for="menu in menus">
               <a
-                href="#features"
+                :href="menu.url"
                 @click="navOpen = !navOpen"
                 class="block py-2 pl-3 pr-4 text-base font-normal border-b border-gray-100 text-navli font-main hover:bg-opacity-80 md:hover:bg-transparent md:border-0 md:hover:opacity-80 md:p-0"
               >
-                Features
-              </a>
-            </li>
-            <li>
-              <a
-                @click="navOpen = !navOpen"
-                href="#reasons"
-                class="block py-2 pl-3 pr-4 text-base font-normal border-b border-gray-100 md:hover:opacity-80 text-navli font-main hover:bg-opacity-80 md:hover:bg-transparent md:border-0 md:p-0"
-              >
-                Reasons
-              </a>
-            </li>
-            <li>
-              <a
-                @click="navOpen = !navOpen"
-                href="#alternatives"
-                class="block py-2 pl-3 pr-4 text-base font-normal border-b border-gray-100 text-navli font-main hover:bg-opacity-80 md:hover:bg-transparent md:border-0 md:hover:opacity-80 md:p-0"
-              >
-                Alternatives
+                {{ menu.menu }}
               </a>
             </li>
             <br />

@@ -27,6 +27,7 @@ export default {
   <!-- Home -->
   <div class="flex flex-row items-center justify-between pt-4">
     <!-- Icon Start -->
+
     <section class="lg:flex hidden flex-col -space-x-12 space-y-12 w-[10%]">
       <!-- Icon home yt -->
       <div class="flex flex-col self-start justify-start cursor-pointer">
