@@ -3,6 +3,10 @@ import { ref } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 
+// image
+import love from "./reason/love.png";
+import sabar from "./reason/sabar.svg";
+import ayam from "./reason/ayam.png";
 // Import Swiper styles
 import "swiper/css";
 
@@ -18,15 +22,51 @@ export default {
     Swiper,
     SwiperSlide,
   },
-  setup() {
+  data() {
     return {
       modules: [Pagination],
+
+      reasonBox: [
+        {
+          alt: "cinta",
+          picture: love,
+          title: "Kamu Jodoh Kami",
+          deskripsi:
+            "Sudah pasti orang yang tidak " +
+            "punya kekasih & jodoh kami " +
+            "mengunjungi website ini.",
+        },
+        {
+          alt: "sabar",
+          picture: sabar,
+          title: "Kamu Sabar",
+          deskripsi:
+            "Sudah pasti orang yang tidak sabar, " +
+            "tidak akan membaca website ini. " +
+            "jadi orang yang sabar itu disayang tuhan & kami.",
+        },
+        {
+          alt: "ayam",
+          picture: ayam,
+          title: "Kok Gambar Ayam? ",
+          deskripsi:
+            "Lah ngatur. " +
+            "Nggak tau lagi alasan yang ketiga, biar bagus aja " +
+            "desainnya. Kalo cuman dua jadinya nggak bagus hehe.",
+        },
+      ],
     };
   },
   props: {
     headReason: String,
     titleReason: String,
   },
+  // methods: {
+  //   getUrl(e) {
+  //     const file = e.target.files[0];
+  //     this.reasonBox.picture = URL.createObjectURL(file);
+  //   },
+  // },
 };
 </script>
 <template>
@@ -63,347 +103,27 @@ export default {
       class="hidden lg:flex flex-col lg:flex-row items-center gap-[1.938rem] order-1"
     >
       <!-- box one -->
-      <div class="flex flex-col items-center gap-3">
+      <div
+        v-for="reasonBoxs in reasonBox"
+        :key="reasonBoxs"
+        class="flex flex-col items-center gap-3"
+      >
         <!-- svg -->
         <div
           class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
         >
-          <img src="../../assets/reason/love.png" alt="love" />
+          <img :src="reasonBoxs.picture" :alt="reasonBoxs.alt" />
         </div>
         <!-- deskripsi -->
         <h1
           class="font-header font-semibold text-[1.375rem] leading-[1.875rem] order-1"
         >
-          Kamu Jodoh Kami
+          {{ reasonBoxs.title }}
         </h1>
         <p
           class="order-2 px-10 text-center font-header text-secondary opacity-60"
         >
-          Sudah pasti orang yang tidak punya kekasih & jodoh kami akan
-          mengunjungi website ini.
-        </p>
-      </div>
-      <!-- box two -->
-      <div class="flex flex-col items-center gap-3">
-        <!-- svg -->
-        <div
-          class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
-        >
-          <svg
-            width="94"
-            height="94"
-            viewBox="0 0 63 60"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M29.5445 59.6998C45.6406 59.6998 58.689 46.6513 58.689 30.5552C58.689 14.4591 45.6406 1.41064 29.5445 1.41064C13.4484 1.41064 0.399902 14.4591 0.399902 30.5552C0.399902 46.6513 13.4484 59.6998 29.5445 59.6998Z"
-              fill="url(#paint0_radial_1044_16076)"
-            />
-            <path
-              opacity="0.5"
-              d="M29.5445 59.6998C45.6406 59.6998 58.689 46.6513 58.689 30.5552C58.689 14.4591 45.6406 1.41064 29.5445 1.41064C13.4484 1.41064 0.399902 14.4591 0.399902 30.5552C0.399902 46.6513 13.4484 59.6998 29.5445 59.6998Z"
-              fill="url(#paint1_radial_1044_16076)"
-            />
-            <path
-              opacity="0.24"
-              d="M29.5445 59.6998C45.6406 59.6998 58.689 46.6513 58.689 30.5552C58.689 14.4591 45.6406 1.41064 29.5445 1.41064C13.4484 1.41064 0.399902 14.4591 0.399902 30.5552C0.399902 46.6513 13.4484 59.6998 29.5445 59.6998Z"
-              fill="url(#paint2_radial_1044_16076)"
-            />
-            <path
-              opacity="0.24"
-              d="M29.5445 59.6998C45.6406 59.6998 58.689 46.6513 58.689 30.5552C58.689 14.4591 45.6406 1.41064 29.5445 1.41064C13.4484 1.41064 0.399902 14.4591 0.399902 30.5552C0.399902 46.6513 13.4484 59.6998 29.5445 59.6998Z"
-              fill="url(#paint3_radial_1044_16076)"
-            />
-            <path
-              d="M37.3406 17.5857C37.3588 16.4199 38.6339 15.7095 40.8015 15.746C42.6412 15.7824 46.685 16.8571 49.4173 20.4819C49.9274 21.1559 49.1259 21.502 48.6341 21.0648C46.94 19.5894 42.368 17.6404 38.7796 17.9682C37.3406 18.0957 37.3406 17.5857 37.3406 17.5857Z"
-              fill="url(#paint4_linear_1044_16076)"
-            />
-            <path
-              d="M17.3946 31.5752C17.3946 31.5752 12.5311 31.2655 11.0557 27.6407C10.9646 27.4039 10.91 27.1671 10.91 26.9303C10.8918 26.4385 11.3289 25.9102 12.2033 26.3474C17.6314 29.0797 20.637 27.6043 22.8957 26.566C23.77 26.1652 24.5897 27.0396 24.3529 27.8411C24.28 28.0779 24.2436 28.3147 24.1161 28.5332C22.2581 31.9031 17.3946 31.5752 17.3946 31.5752Z"
-              fill="url(#paint5_radial_1044_16076)"
-            />
-            <path
-              opacity="0.16"
-              d="M34.4084 18.4968H30.0003L35.0095 11.2835C35.2827 10.901 35.3192 10.3909 35.1006 9.97197C34.882 9.55302 34.4448 9.27979 33.9712 9.27979H27.8327C27.1223 9.27979 26.7397 9.84446 26.7397 10.5549C26.7397 11.2653 27.1223 11.8299 27.8327 11.8299H31.5304L26.5211 19.0432C26.2479 19.4257 26.2115 19.9358 26.4301 20.3547C26.6487 20.7737 27.0858 21.0469 27.5594 21.0469H34.3902C35.1006 21.0469 35.4831 20.4822 35.4831 19.7718C35.4831 19.0614 35.1188 18.4968 34.4084 18.4968Z"
-              fill="#612D5B"
-            />
-            <path
-              d="M29.5445 50.4107C32.6631 50.4107 35.1912 48.3637 35.1912 45.8387C35.1912 43.3136 32.6631 41.2666 29.5445 41.2666C26.4258 41.2666 23.8977 43.3136 23.8977 45.8387C23.8977 48.3637 26.4258 50.4107 29.5445 50.4107Z"
-              fill="url(#paint6_radial_1044_16076)"
-            />
-            <path
-              d="M29.5442 42.6692C31.9668 42.6692 34.0798 43.7803 35.1545 45.4015C34.8813 43.0699 32.4768 41.2666 29.5442 41.2666C26.6115 41.2666 24.1889 43.0881 23.9338 45.4015C25.0085 43.7803 27.1215 42.6692 29.5442 42.6692Z"
-              fill="url(#paint7_linear_1044_16076)"
-            />
-            <path
-              d="M23.9703 26.6758C23.697 26.4572 23.2963 26.3662 22.8956 26.5483C20.6551 27.5866 17.6313 29.0803 12.2032 26.3297C11.8024 26.1294 11.4928 26.1294 11.2742 26.2387C13.2596 28.716 20.8554 30.2096 23.9703 26.6758Z"
-              fill="url(#paint8_linear_1044_16076)"
-            />
-            <path
-              d="M41.6937 31.5757C41.6937 31.5757 46.5572 31.266 48.0326 27.6412C48.1237 27.4044 48.1783 27.1676 48.1783 26.9308C48.1966 26.439 47.7594 25.9107 46.8851 26.3479C41.4569 29.0802 38.4514 27.6047 36.1927 26.5665C35.3183 26.1657 34.4986 27.0401 34.7354 27.8415C34.8083 28.0783 34.8447 28.3151 34.9722 28.5337C36.8302 31.9036 41.6937 31.5757 41.6937 31.5757Z"
-              fill="url(#paint9_radial_1044_16076)"
-            />
-            <path
-              d="M35.1187 26.6758C35.3919 26.4572 35.7926 26.3662 36.1934 26.5483C38.4338 27.5866 41.4576 29.0803 46.8858 26.3297C47.2865 26.1294 47.5962 26.1294 47.8147 26.2387C45.8293 28.716 38.2335 30.2096 35.1187 26.6758Z"
-              fill="url(#paint10_linear_1044_16076)"
-            />
-            <path
-              d="M21.7484 17.5867C21.7302 16.4209 20.4551 15.7105 18.2875 15.7469C16.4477 15.7834 12.4039 16.8581 9.67161 20.4829C9.16158 21.1569 9.96306 21.503 10.4549 21.0658C12.1489 19.5904 16.721 17.6413 20.3094 17.9692C21.7484 18.0967 21.7484 17.5867 21.7484 17.5867Z"
-              fill="url(#paint11_linear_1044_16076)"
-            />
-            <path
-              opacity="0.16"
-              d="M43.4427 4.92676L38.1056 12.6319C37.8142 13.0508 37.7778 13.5973 38.0146 14.0527C38.2514 14.508 38.725 14.7813 39.2168 14.7813H47.523C48.2698 14.7813 48.707 14.1619 48.707 13.4151C48.707 12.6683 48.2698 12.049 47.523 12.049H41.8216L45.7743 6.34756C45.0275 5.83753 44.2442 5.36393 43.4427 4.92676Z"
-              fill="#612D5B"
-            />
-            <path
-              opacity="0.24"
-              d="M40.5826 3.57818C39.8904 3.28673 39.1618 3.03172 38.4514 2.79492C38.6154 3.2503 38.9979 3.57818 39.5443 3.57818H40.5826Z"
-              fill="#612D5B"
-            />
-            <path
-              opacity="0.16"
-              d="M53.4615 13.9067L51.3121 17.0033C51.057 17.3494 50.966 17.8048 51.0753 18.2238C51.2392 18.8977 51.8403 19.3349 52.4961 19.3349H52.5325C54.0262 19.3349 55.3194 19.4988 56.7038 19.9542C55.8477 17.7866 54.7548 15.7647 53.4615 13.9067Z"
-              fill="#612D5B"
-            />
-            <path
-              d="M33.6792 20.501H26.8485C26.3749 20.501 25.9377 20.246 25.7191 19.8088C25.5006 19.3717 25.537 18.8798 25.8102 18.4973L30.8194 11.284H27.1217C26.4113 11.284 26.0288 10.7194 26.0288 10.009C26.0288 9.29856 26.4113 8.73389 27.1217 8.73389H33.2603C33.7339 8.73389 34.1711 8.9889 34.3896 9.42607C34.6082 9.86324 34.5718 10.3551 34.2986 10.7376L29.2893 17.9509H33.6975C34.4079 17.9509 34.7904 18.5155 34.7904 19.2259C34.7904 19.9363 34.3896 20.501 33.6792 20.501Z"
-              fill="url(#paint12_linear_1044_16076)"
-            />
-            <path
-              d="M46.4305 14.2346H38.1243C37.6143 14.2346 37.1407 13.9613 36.9221 13.5059C36.7035 13.0506 36.7217 12.5041 37.0132 12.0851L43.2792 3.03211H38.434C37.6871 3.03211 37.25 2.41279 37.25 1.66596C37.25 0.919127 37.6871 0.299805 38.434 0.299805H45.884C46.3941 0.299805 46.8677 0.573035 47.0862 1.02842C47.3048 1.4838 47.2866 2.03026 46.9952 2.44922L40.7109 11.5023H46.4123C47.1591 11.5023 47.5963 12.1216 47.5963 12.8684C47.5963 13.6152 47.1773 14.2346 46.4305 14.2346Z"
-              fill="url(#paint13_linear_1044_16076)"
-            />
-            <path
-              d="M60.8022 18.5884H51.4031C50.8567 18.5884 50.3648 18.2788 50.1098 17.8052C49.8548 17.3316 49.8912 16.7487 50.2009 16.2933L57.4142 5.91055H51.7674C50.966 5.91055 50.4924 5.2548 50.4924 4.45332C50.4924 3.65185 50.966 2.99609 51.7674 2.99609H60.2011C60.7476 2.99609 61.2394 3.30575 61.4944 3.77935C61.7494 4.25295 61.713 4.83584 61.4033 5.29123L54.1901 15.674H60.8022C61.6037 15.674 62.0773 16.3297 62.0773 17.1312C62.0773 17.9327 61.6037 18.5884 60.8022 18.5884Z"
-              fill="url(#paint14_linear_1044_16076)"
-            />
-            <defs>
-              <radialGradient
-                id="paint0_radial_1044_16076"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(23.8102 18.7428) scale(35.1591 35.1591)"
-              >
-                <stop stop-color="#FFE030" />
-                <stop offset="1" stop-color="#FFB92E" />
-              </radialGradient>
-              <radialGradient
-                id="paint1_radial_1044_16076"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(23.8102 18.7428) scale(27.6613 27.6613)"
-              >
-                <stop stop-color="#FFEA5F" />
-                <stop offset="1" stop-color="#FFBC47" stop-opacity="0" />
-              </radialGradient>
-              <radialGradient
-                id="paint2_radial_1044_16076"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(13.6663 37.8046) rotate(-2.7703) scale(12.2589 9.69986)"
-              >
-                <stop stop-color="#FF4C00" />
-                <stop offset="0.1542" stop-color="#FF4C00" />
-                <stop offset="0.1795" stop-color="#FF4C00" />
-                <stop
-                  offset="0.3996"
-                  stop-color="#FB4C0B"
-                  stop-opacity="0.7318"
-                />
-                <stop
-                  offset="0.7799"
-                  stop-color="#EF4B27"
-                  stop-opacity="0.2683"
-                />
-                <stop offset="1" stop-color="#E74A3A" stop-opacity="0" />
-              </radialGradient>
-              <radialGradient
-                id="paint3_radial_1044_16076"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(45.3904 37.8046) rotate(-177.23) scale(12.2589 9.69986)"
-              >
-                <stop stop-color="#FF4C00" />
-                <stop offset="0.1542" stop-color="#FF4C00" />
-                <stop offset="0.1795" stop-color="#FF4C00" />
-                <stop
-                  offset="0.3996"
-                  stop-color="#FB4C0B"
-                  stop-opacity="0.7318"
-                />
-                <stop
-                  offset="0.7799"
-                  stop-color="#EF4B27"
-                  stop-opacity="0.2683"
-                />
-                <stop offset="1" stop-color="#E74A3A" stop-opacity="0" />
-              </radialGradient>
-              <linearGradient
-                id="paint4_linear_1044_16076"
-                x1="43.4799"
-                y1="19.6263"
-                x2="43.5294"
-                y2="16.5578"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0.00132565" stop-color="#3C2200" />
-                <stop offset="1" stop-color="#7A4400" />
-              </linearGradient>
-              <radialGradient
-                id="paint5_radial_1044_16076"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(17.5196 28.8169) rotate(-176.151) scale(5.23787 2.52708)"
-              >
-                <stop offset="0.00132565" stop-color="#7A4400" />
-                <stop offset="1" stop-color="#643800" />
-              </radialGradient>
-              <radialGradient
-                id="paint6_radial_1044_16076"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(29.1957 46.0993) rotate(70.3551) scale(5.65628 4.33876)"
-              >
-                <stop offset="0.00132565" stop-color="#7A4400" />
-                <stop offset="1" stop-color="#643800" />
-              </radialGradient>
-              <linearGradient
-                id="paint7_linear_1044_16076"
-                x1="29.5442"
-                y1="39.1026"
-                x2="29.5442"
-                y2="46.5579"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0.00132565" stop-color="#3C2200" />
-                <stop offset="1" stop-color="#512D00" />
-              </linearGradient>
-              <linearGradient
-                id="paint8_linear_1044_16076"
-                x1="16.691"
-                y1="24.047"
-                x2="18.8329"
-                y2="29.6247"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0.00132565" stop-color="#3C2200" />
-                <stop offset="1" stop-color="#512D00" />
-              </linearGradient>
-              <radialGradient
-                id="paint9_radial_1044_16076"
-                cx="0"
-                cy="0"
-                r="1"
-                gradientUnits="userSpaceOnUse"
-                gradientTransform="translate(41.5685 28.8174) rotate(-3.84889) scale(5.23786 2.52708)"
-              >
-                <stop offset="0.00132565" stop-color="#7A4400" />
-                <stop offset="1" stop-color="#643800" />
-              </radialGradient>
-              <linearGradient
-                id="paint10_linear_1044_16076"
-                x1="42.3978"
-                y1="24.0468"
-                x2="40.2559"
-                y2="29.6244"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0.00132565" stop-color="#3C2200" />
-                <stop offset="1" stop-color="#512D00" />
-              </linearGradient>
-              <linearGradient
-                id="paint11_linear_1044_16076"
-                x1="15.6081"
-                y1="19.6273"
-                x2="15.5586"
-                y2="16.5588"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop offset="0.00132565" stop-color="#3C2200" />
-                <stop offset="1" stop-color="#7A4400" />
-              </linearGradient>
-              <linearGradient
-                id="paint12_linear_1044_16076"
-                x1="14.9867"
-                y1="4.53355"
-                x2="35.9344"
-                y2="18.5594"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#80DAFE" />
-                <stop offset="1" stop-color="#7000A3" />
-              </linearGradient>
-              <linearGradient
-                id="paint13_linear_1044_16076"
-                x1="36.2146"
-                y1="-1.73868"
-                x2="45.5955"
-                y2="12.8336"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#80DAFE" />
-                <stop offset="1" stop-color="#7000A3" />
-              </linearGradient>
-              <linearGradient
-                id="paint14_linear_1044_16076"
-                x1="51.2648"
-                y1="-0.950315"
-                x2="58.642"
-                y2="18.1758"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stop-color="#80DAFE" />
-                <stop offset="1" stop-color="#7000A3" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-        <!-- deskripsi -->
-        <h1
-          class="font-header font-semibold text-[1.375rem] leading-[1.875rem] order-1"
-        >
-          Kamu Sabar
-        </h1>
-        <p
-          class="order-2 px-10 text-center font-header text-secondary opacity-60"
-        >
-          Sudah pasti orang yang tidak sabar, tidak akan membaca website ini.
-          jadi orang yang sabar itu disayang tuhan & kami.
-        </p>
-      </div>
-      <!-- box three -->
-      <div class="flex flex-col items-center gap-3">
-        <!-- svg -->
-        <div
-          class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
-        >
-          <img src="../../assets/reason/ayam.png" alt="ayam" />
-        </div>
-        <!-- deskripsi -->
-        <h1
-          class="font-header font-semibold text-[1.375rem] leading-[1.875rem] order-1"
-        >
-          Kok Gambar Ayam?
-        </h1>
-        <p
-          class="order-2 px-10 text-center font-header text-secondary opacity-60"
-        >
-          Lah ngatur. Nggak tau lagi alasan yang ketiga, biar bagus aja
-          desainnya. Kalo cuman dua jadinya nggak bagus hehe.
+          {{ reasonBoxs.deskripsi }}
         </p>
       </div>
     </div>

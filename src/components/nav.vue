@@ -156,7 +156,7 @@ export default {
                 Beranda
               </a>
             </li>
-            <li v-for="menu in menus">
+            <li v-for="menu in menus" :key="menu">
               <a
                 :href="menu.url"
                 @click="navOpen = !navOpen"
