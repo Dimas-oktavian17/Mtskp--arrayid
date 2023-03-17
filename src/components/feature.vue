@@ -32,6 +32,7 @@ export default {
   props: {
     headFeature: String,
     titleFeature: String,
+    deskripsiFeature: String,
   },
 };
 </script>
@@ -78,14 +79,14 @@ export default {
       </h2>
       <!-- deskripsi -->
       <p
+        :deskripsiFeature="deskripsiFeature"
         class="order-4 text-base font-normal pl-10 pr-8 lg:pl-0 font-header text-homePrimary opacity-60 pb-[3.125rem]"
       >
-        Di sini kita akan klarifikasi mengapa kamu harus memilih okta, ngga
-        wajib sih. Masih mau baca?, yaudah ini penjelasan'nya.
+        {{ deskripsiFeature }}
       </p>
       <!-- button -->
-
       <a
+        href="#features"
         class="text-base font-bold font-main text-secondary2 flex flex-row justify-between items-center ml-10 lg:ml-0 py-3 lg:py-5 px-5 lg:px-[1.875rem] bg-homePrimary rounded-full order-6 shadow-btnfeature group transition-all hover:pr-8 hover:opacity-95"
       >
         Pelajari Lebih Lanjut

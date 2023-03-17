@@ -38,6 +38,10 @@ export default {
       dataFeature: {
         head: "KENAPA SIH?",
         title: "Kenapa Kamu Harus Pilih Okta?",
+        deskripsi:
+          "Di sini kita akan klarifikasi mengapa kamu harus memilih okta, ngga " +
+          "wajib sih. " +
+          "Masih mau baca?, yaudah ini penjelasan'nya.",
       },
       text: "Expression",
       user: {
@@ -222,6 +226,7 @@ export default {
         <featureVue
           :headFeature="dataFeature.head"
           :titleFeature="dataFeature.title"
+          :deskripsiFeature="dataFeature.deskripsi"
         ></featureVue>
         <!-- end wrapper feature-->
         <!-- wrapper reasons -->
