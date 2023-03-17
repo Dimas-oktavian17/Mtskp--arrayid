@@ -28,7 +28,6 @@ export default {
 
       reasonBox: [
         {
-          alt: "cinta",
           picture: love,
           title: "Kamu Jodoh Kami",
           deskripsi:
@@ -37,7 +36,6 @@ export default {
             "mengunjungi website ini.",
         },
         {
-          alt: "sabar",
           picture: sabar,
           title: "Kamu Sabar",
           deskripsi:
@@ -46,7 +44,6 @@ export default {
             "jadi orang yang sabar itu disayang tuhan & kami.",
         },
         {
-          alt: "ayam",
           picture: ayam,
           title: "Kok Gambar Ayam? ",
           deskripsi:
@@ -112,7 +109,11 @@ export default {
         <div
           class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
         >
-          <img :src="reasonBoxs.picture" :alt="reasonBoxs.alt" />
+          <img
+            class="w-[94px] h-[94px]"
+            :src="reasonBoxs.picture"
+            :alt="reasonBoxs.title"
+          />
         </div>
         <!-- deskripsi -->
         <h1
@@ -136,7 +137,11 @@ export default {
           <div
             class="w-[18.25rem] h-[12.50rem] rounded-[0.625rem] bg-[#f4ebe4] flex flex-col items-center justify-center"
           >
-            <img :src="reasonBoxs.picture" :alt="reasonBoxs.alt" />
+            <img
+              class="w-[94px] h-[94px]"
+              :src="reasonBoxs.picture"
+              :alt="reasonBoxs.title"
+            />
           </div>
           <!-- deskripsi -->
           <h1
