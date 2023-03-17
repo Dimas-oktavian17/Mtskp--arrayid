@@ -91,7 +91,11 @@ export default {
           <div
             class="group flex flex-row justify-center items-center p-2 gap-[10px] w-10 h-10 bg-bg-icon rounded-md cursor-pointer transition-all duration-1000"
           >
-            <a href="https://t.me/DmsOkr" target="_blank">
+            <a
+              aria-label="Telegram Profile"
+              href="https://t.me/DmsOkr"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -106,74 +110,14 @@ export default {
               </svg>
             </a>
           </div>
-          <!-- <div
-            class="group flex flex-row justify-center items-center p-2 gap-[10px] w-10 h-10 bg-bg-icon rounded-md transition-all duration-1000 cursor-pointer"
-          >
-            <a
-              href="https://www.facebook.com/dimas.oktavian.5055"
-              target="_blank"
-            >
-              <svg
-                class="group-hover:fill-white"
-                width="24"
-                height="24"
-                viewBox="0 0 24 31"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <g filter="url(#filter0_d_27_427)">
-                  <path
-                    d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z"
-                    stroke="#0C1B4D"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </g>
-                <defs>
-                  <filter
-                    id="filter0_d_27_427"
-                    x="-4"
-                    y="0"
-                    width="32"
-                    height="32"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    />
-                    <feOffset dy="4" />
-                    <feGaussianBlur stdDeviation="2" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow_27_427"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow_27_427"
-                      result="shape"
-                    />
-                  </filter>
-                </defs>
-              </svg>
-            </a>
-          </div> -->
           <div
             class="group flex flex-row justify-center items-center p-2 gap-[10px] w-10 h-10 bg-bg-icon rounded-md transition-all duration-1000 cursor-pointer"
           >
-            <a href="https://github.com/Dimas-oktavian17" target="_blank">
+            <a
+              aria-label="Github Profile"
+              href="https://github.com/Dimas-oktavian17"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
