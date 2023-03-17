@@ -17,7 +17,7 @@ export default {
           <img
             src="../../../public/expresion.png"
             alt="Expression"
-            class="rounded-2xl"
+            class="w-auto h-auto rounded-2xl"
           />
         </figure>
       </div>
