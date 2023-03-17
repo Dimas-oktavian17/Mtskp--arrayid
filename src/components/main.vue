@@ -25,7 +25,7 @@ export default {
 </script>
 <template>
   <!-- Home -->
-  <div class="flex flex-row items-center justify-between pt-4">
+  <div class="flex flex-row items-center justify-between pt-4 text-focus-in">
     <!-- Icon Start -->
 
     <section class="lg:flex hidden flex-col -space-x-12 space-y-12 w-[10%]">
