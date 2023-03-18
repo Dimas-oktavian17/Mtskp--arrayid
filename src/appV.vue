@@ -1,11 +1,16 @@
 <script>
+// import defineAsyncComponenet for lazy component
+import { defineAsyncComponent } from "vue";
+// implement
+// const featureLazy = defineAsyncComponent(() => {
+//   import("./components/feature.vue");
+// });
 import "./assets/style.css";
 // local component registration
 import home from "./components/home.vue";
 import navVue from "./components/nav.vue";
-import featureVue from "./components/feature.vue";
 import footerVue from "./components/footer.vue";
-import wrapperVue from "./components/wrapper.vue";
+// import wrapperVue from "./components/wrapper.vue";
 import bodyVue from "./components/body.vue";
 import mainVue from "./components/main.vue";
 import bgTwo from "./components/component/bgtwo.vue";
@@ -14,7 +19,7 @@ import expresion from "./components/component/expresion.vue";
 import reason from "./components/component/reason.vue";
 import loginVue from "./components/component/login.vue";
 
-// import featureVue from "./components/feature.vue";
+import featureVue from "./components/feature.vue";
 // import Wrapper from "./components/wrapper.vue";
 export default {
   name: "App",
@@ -27,7 +32,6 @@ export default {
     navVue,
     featureVue,
     footerVue,
-    wrapperVue,
     bodyVue,
     mainVue,
     reason,
