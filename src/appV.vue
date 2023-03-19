@@ -1,10 +1,4 @@
 <script>
-// import defineAsyncComponenet for lazy component
-import { defineAsyncComponent } from "vue";
-// implement
-// const featureLazy = defineAsyncComponent(() => {
-//   import("./components/feature.vue");
-// });
 import "./assets/style.css";
 // local component registration
 import home from "./components/home.vue";
