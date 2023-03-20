@@ -5,6 +5,16 @@ export default {
   props: {
     title: String,
   },
+  data() {
+    return {
+      sitemap: [
+        { title: "Beranda", link: "#beranda" },
+        { title: "Features", link: "#features" },
+        { title: "Reasons", link: "#reasons" },
+        { title: "Alternatives", link: "#alternatives" },
+      ],
+    };
+  },
 };
 </script>
 <template>
@@ -61,17 +71,12 @@ export default {
         <h1 class="text-lg font-bold text-homePrimary font-header">Sitemap</h1>
         <div class="flex flex-col items-start gap-[10px] order-1">
           <ul class="flex flex-col gap-4">
-            <li class="text-base font-normal font-header text-homePrimary">
-              <a href="#beranda">Beranda</a>
-            </li>
-            <li class="text-base font-normal font-header text-homePrimary">
-              <a href="#features">Features</a>
-            </li>
-            <li class="text-base font-normal font-header text-homePrimary">
-              <a href="#reasons">Reasons</a>
-            </li>
-            <li class="text-base font-normal font-header text-homePrimary">
-              <a href="#alternatives">Alternatives</a>
+            <li
+              v-for="sitemaps in sitemap"
+              :key="sitemaps"
+              class="text-base font-normal font-header text-homePrimary"
+            >
+              <a :href="sitemaps.link">{{ sitemaps.title }}</a>
             </li>
           </ul>
         </div>
