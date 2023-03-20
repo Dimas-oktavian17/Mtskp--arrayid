@@ -622,6 +622,10 @@ video {
   z-index: 999;
 }
 
+.order-1 {
+  order: 1;
+}
+
 .order-2 {
   order: 2;
 }
@@ -632,10 +636,6 @@ video {
 
 .order-6 {
   order: 6;
-}
-
-.order-1 {
-  order: 1;
 }
 
 .order-3 {
@@ -941,6 +941,10 @@ video {
   justify-content: space-between;
 }
 
+.gap-\[1\.1188rem\] {
+  gap: 1.1188rem;
+}
+
 .gap-\[8\.188rem\] {
   gap: 8.188rem;
 }
@@ -951,10 +955,6 @@ video {
 
 .gap-\[1px\] {
   gap: 1px;
-}
-
-.gap-\[1\.1188rem\] {
-  gap: 1.1188rem;
 }
 
 .gap-\[1\.313rem\] {
@@ -1071,12 +1071,12 @@ video {
   border-radius: 0.5rem;
 }
 
-.rounded-\[0\.625rem\] {
-  border-radius: 0.625rem;
-}
-
 .rounded-\[0\.313rem\] {
   border-radius: 0.313rem;
+}
+
+.rounded-\[0\.625rem\] {
+  border-radius: 0.625rem;
 }
 
 .rounded-md {
@@ -1145,13 +1145,13 @@ video {
   background-color: #FFFFFF08;
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-\[\#ffe9d6\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 233 214 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
 }
 
 .bg-bg-icon {
@@ -1241,16 +1241,16 @@ video {
   padding: 0.5rem;
 }
 
-.p-4 {
-  padding: 1rem;
+.p-\[0\.625rem\] {
+  padding: 0.625rem;
 }
 
 .p-\[1\.094rem\] {
   padding: 1.094rem;
 }
 
-.p-\[0\.625rem\] {
-  padding: 0.625rem;
+.p-4 {
+  padding: 1rem;
 }
 
 .p-20 {
@@ -1429,16 +1429,16 @@ video {
   font-weight: 500;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .font-semibold {
   font-weight: 600;
 }
 
 .font-bold {
   font-weight: 700;
-}
-
-.font-normal {
-  font-weight: 400;
 }
 
 .capitalize {
@@ -1467,14 +1467,14 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-homeSecondary {
-  --tw-text-opacity: 1;
-  color: rgb(252 136 29 / var(--tw-text-opacity));
-}
-
 .text-homePrimary {
   --tw-text-opacity: 1;
   color: rgb(13 14 37 / var(--tw-text-opacity));
+}
+
+.text-homeSecondary {
+  --tw-text-opacity: 1;
+  color: rgb(252 136 29 / var(--tw-text-opacity));
 }
 
 .text-secondary2 {
@@ -1598,7 +1598,7 @@ video {
  * ---------------------------------------------- */
 
 .text-focus-in {
-  animation: text-focus-in 2s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: text-focus-in 2s ease-in-out both;
 }
 
 @keyframes text-focus-in {
@@ -1932,12 +1932,12 @@ video {
     margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 
-  .lg\:p-0 {
-    padding: 0px;
-  }
-
   .lg\:p-\[2\.188rem\] {
     padding: 2.188rem;
+  }
+
+  .lg\:p-0 {
+    padding: 0px;
   }
 
   .lg\:py-5 {

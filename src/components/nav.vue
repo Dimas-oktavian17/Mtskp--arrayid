@@ -54,10 +54,10 @@ export default {
 </script>
 <template>
   <header class="container" id="beranda">
-    <nav class="px-2 mb-10 border-gray-200 text-focus-in font-header" id="nav">
+    <div class="px-2 mb-10 border-gray-200 font-header">
       <div
         id="sidemenu"
-        class="fixed container bg-[#1b1525] w-[95%] z-[999] mx-auto flex flex-wrap items-center justify-between rounded-xl lg:w-[98%]"
+        class="text-focus-in fixed container bg-[#1b1525] w-[95%] z-[999] mx-auto flex flex-wrap items-center justify-between rounded-xl lg:w-[98%]"
       >
         <a href="#beranda" class="flex ml-4 group">
           <svg
@@ -180,6 +180,6 @@ export default {
           </ul>
         </div>
       </div>
-    </nav>
+    </div>
   </header>
 </template>
