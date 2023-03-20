@@ -13,6 +13,10 @@ export default {
         { title: "Reasons", link: "#reasons" },
         { title: "Alternatives", link: "#alternatives" },
       ],
+      lisensi: [
+        { title: "COPYRIGHT (C) 2021. DESIGN BY NAUVAL" },
+        { title: "COPYRIGHT (C) 2023. CREATE BY OKTA" },
+      ],
     };
   },
 };
@@ -57,14 +61,11 @@ export default {
           itu lebih baik pilih cowo lain aja.
         </p>
         <p
+          v-for="lisense in lisensi"
+          :key="lisense"
           class="order-2 text-sm font-semibold tracking-widest font-header text-homePrimary"
         >
-          COPYRIGHT (C) 2021. DESIGN BY NAUVAL
-        </p>
-        <p
-          class="order-2 text-sm font-semibold tracking-widest font-header text-homePrimary"
-        >
-          COPYRIGHT (C) 2023. CREATE BY OKTA
+          {{ lisense.title }}
         </p>
       </div>
       <div class="flex flex-col items-start flex-grow order-1 gap-4 lg:gap-2">
