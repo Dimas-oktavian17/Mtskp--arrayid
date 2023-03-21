@@ -1,9 +1,17 @@
 <script>
 import ContactForm from "./ContactForm.vue";
-
+import expression from "../../assets/expression/Expression.webp";
 export default {
   components: { ContactForm, ContactForm },
   props: ["inputText"],
+  data() {
+    return {
+      expresion: {
+        src: expression,
+        alt: "Expression",
+      },
+    };
+  },
 };
 </script>
 <template>
@@ -15,8 +23,8 @@ export default {
       <div class="pb-8">
         <figure class="w-auto h-auto">
           <img
-            src="../../../public/expresion.png"
-            alt="Expression"
+            :src="expresion.src"
+            :alt="expresion.alt"
             class="w-auto h-auto rounded-2xl"
           />
         </figure>
