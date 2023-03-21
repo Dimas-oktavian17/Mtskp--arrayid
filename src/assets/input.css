@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 /* container */
+
 @layer components {
   .container {
     @apply max-w-5xl py-8 mx-auto;
