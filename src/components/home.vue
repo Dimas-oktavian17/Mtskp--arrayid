@@ -13,7 +13,7 @@ import logo from "./logo.vue";
     >
       <section class="box-border pt-32">
         <mainVue></mainVue>
-        <logo></logo>
+        <img src="./icons/iconFigma/Group-13-_1_.webp" alt="" />
       </section>
     </div>
   </section>

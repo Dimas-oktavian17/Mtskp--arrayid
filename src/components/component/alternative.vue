@@ -1,3 +1,15 @@
+<script>
+export default {
+  name: "alternative",
+  components: {},
+  data() {
+    return {
+      title: "ALTERNATIVES",
+      deskripsi: "Karena Kami Ini Nggak Ada Apa-Apanya, Lebih Baik Cari Lain!",
+    };
+  },
+};
+</script>
 <template>
   <!-- wrapper alternatives -->
   <div class="container scroll-mt-32 lg:scroll-mt-72" id="alternatives">
@@ -23,13 +35,13 @@
               fill="white"
             />
           </svg>
-          <p class="order-1 text-base font-semibold text-white font-header">
-            ALTERNATIVES
-          </p>
+          <h1 class="order-1 text-base font-semibold text-white font-header">
+            {{ title }}
+          </h1>
         </div>
-        <h1 class="order-2 text-4xl font-bold text-white font-header">
-          Karena Kami Ini Nggak Ada Apa-Apanya, Lebih Baik Cari Lain!
-        </h1>
+        <p class="order-2 text-4xl font-bold text-white font-header">
+          {{ deskripsi }}
+        </p>
       </div>
       <!-- deskripsi -->
       <p
