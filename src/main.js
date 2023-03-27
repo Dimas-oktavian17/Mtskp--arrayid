@@ -1,20 +1,35 @@
 // // this default for create app
 import { createApp } from "vue";
-// // import file vue in module
 // // how to create app
-import appV from "./appV.vue";
+import App from "./appV.vue";
 // // import file css
 import "./assets/style.css";
+// Register global component
+import home from "./components/home.vue";
+import navVue from "./components/nav.vue";
+import footerVue from "./components/footer.vue";
+import mainVue from "./components/main.vue";
+import bgTwo from "./components/component/bgtwo.vue";
+import alternative from "./components/component/alternative.vue";
+import expresion from "./components/component/expresion.vue";
+import reason from "./components/component/reason.vue";
+import loginVue from "./components/component/login.vue";
+import featureVue from "./components/feature.vue";
 
-// // create app local
-createApp(appV).mount("#App");
-// kinesis vue libray for animation & flicking libray
-// import VueKinesis from "vue-kinesis";
-// import Flicking from "@egjs/vue3-flicking";
-// appV.use(VueKinesis);
-// appV.component(
-//   // the registered name
-//   "Flicking",
-//   Flicking
-//   // the implementation
-// );
+// Your app
+const app = createApp(App);
+// inject to app
+app
+  .component("home", home)
+  .component("navVue", navVue)
+  .component("footerVue", footerVue)
+  .component("mainVue", mainVue)
+  .component("bgTwo", bgTwo)
+  .component("alternative", alternative)
+  .component("expresion", expresion)
+  .component("reason", reason)
+  .component("loginVue", loginVue)
+  .component("featureVue", featureVue);
+
+// Mounted to dom
+app.mount("#app");

@@ -1,36 +1,10 @@
 <script>
 import "./assets/style.css";
-// local component registration
-import home from "./components/home.vue";
-import navVue from "./components/nav.vue";
-import footerVue from "./components/footer.vue";
-// import wrapperVue from "./components/wrapper.vue";
-import bodyVue from "./components/body.vue";
-import mainVue from "./components/main.vue";
-import bgTwo from "./components/component/bgtwo.vue";
-import alternative from "./components/component/alternative.vue";
-import expresion from "./components/component/expresion.vue";
-import reason from "./components/component/reason.vue";
-import loginVue from "./components/component/login.vue";
 
-import featureVue from "./components/feature.vue";
-// import Wrapper from "./components/wrapper.vue";
 export default {
   name: "App",
-  // local component registration
-  components: {
-    bgTwo,
-    alternative,
-    expresion,
-    home,
-    navVue,
-    featureVue,
-    footerVue,
-    bodyVue,
-    mainVue,
-    reason,
-    loginVue,
-  },
+  // If want local component registration
+  components: {},
   data() {
     return {
       dataFeature: {
@@ -139,7 +113,6 @@ export default {
         ></div>
       </div>
     </div>
-
     <!-- login form local stroage -->
     <div id="login" class="bg-gradient-to-r from-slate-50 to-slate-300">
       <div class="flex items-center justify-center h-screen">
@@ -234,7 +207,6 @@ export default {
         ></reason>
         <!-- end wrapper reasons -->
       </div>
-
       <home></home>
       <navVue :title="text"></navVue>
     </div>
