@@ -1,8 +1,3 @@
-<script setup>
-import bgsecondary from "./component/bgsecondary.vue";
-import mainVue from "./main.vue";
-import logo from "./logo.vue";
-</script>
 <template>
   <section class="box-border">
     <!-- secondary home bg -->
@@ -13,7 +8,7 @@ import logo from "./logo.vue";
     >
       <section class="box-border pt-32">
         <mainVue></mainVue>
-        <img src="./icons/iconFigma/Group-13-_1_.webp" alt="" />
+        <img src="./icons/iconFigma/Group-13-_1_.webp" alt="logo dekstop" />
       </section>
     </div>
   </section>

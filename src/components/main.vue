@@ -1,20 +1,7 @@
 <script>
-import kinesisHomeVue from "./component/kinesisHome.vue";
-import kinesisHomeVueTwo from "./component/kinesisHomeTwo.vue";
-import kinesisCenter from "./component/kinesesiCenter.vue";
-import kinesisCenterTwo from "./component/kinesisCenterTwo.vue";
-import kinesisEnd from "./component/kinesisEnd.vue";
-import kinesisEndTwo from "./component/kinesisEndTwo.vue";
 export default {
   name: "mainVue",
-  components: {
-    kinesisHomeVue,
-    kinesisHomeVueTwo,
-    kinesisCenter,
-    kinesisCenterTwo,
-    kinesisEnd,
-    kinesisEndTwo,
-  },
+  components: {},
   data() {
     return {
       Title: "Expression",

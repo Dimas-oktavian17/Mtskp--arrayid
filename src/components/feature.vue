@@ -2,7 +2,6 @@
 import { ref } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import InlineSvg from "vue-inline-svg";
 // import image
 import insighfull from "../assets/feature/insightfull.svg";
 import openmind from "../assets/feature/openmind.svg";
@@ -17,20 +16,10 @@ import "../assets/swipper.css";
 
 // import required modules
 import { Pagination } from "swiper";
-// import openmindVue from "../assets/feature/openmind.vue";
-// import insightfullVue from "../assets/feature/insightfull.vue";
-// import encorageVue from "../assets/feature/encorage.vue";
-// import envirotmentVue from "../assets/feature/envirotment.vue";
-
 export default {
   components: {
     Swiper,
     SwiperSlide,
-    InlineSvg,
-    // insighfull,
-    // openmind,
-    // encorage,
-    // envirotment,
   },
   data() {
     return {

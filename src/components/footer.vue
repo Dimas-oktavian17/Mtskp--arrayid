@@ -1,14 +1,10 @@
 <script>
-// import svg libray
-import InlineSvg from "vue-inline-svg";
 // import svg medsos
 import github from "../assets/footer/github.svg";
 import tele from "../assets/footer/tele.svg";
 export default {
   name: "footerVue",
-  components: {
-    InlineSvg,
-  },
+  components: {},
   props: {
     title: String,
   },

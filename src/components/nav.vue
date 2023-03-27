@@ -1,6 +1,4 @@
 <script>
-import Main from "./main.vue";
-
 // in non-<script setup>
 export default {
   name: "navVue",

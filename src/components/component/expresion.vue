@@ -1,8 +1,7 @@
 <script>
-import ContactForm from "./ContactForm.vue";
 import expression from "../../assets/expression/Expression.webp";
 export default {
-  components: { ContactForm, ContactForm },
+  components: {},
   props: ["inputText"],
   data() {
     return {
