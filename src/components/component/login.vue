@@ -3,6 +3,9 @@ export default {
   name: "login",
   data() {
     return {
+      form: {
+        placeholder: "Username",
+      },
       user: {
         username: "",
         password: "",
@@ -36,7 +39,7 @@ export default {
     let user = localStorage.getItem("username");
     let sandi = localStorage.getItem("pw");
 
-    if (user === "mslove" && sandi === "mslove123") {
+    if (user === "admin" && sandi === "admin") {
       localStorage.setItem("role", "admin");
       login.classList.add("hidden");
       main.classList.remove("hidden");
@@ -65,9 +68,8 @@ export default {
         type="text"
         name="username"
         class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FE5E44] focus:border-[#FE5E44] block w-full p-2.5"
-        placeholder="myLove"
+        :placeholder="form.placeholder"
       />
-
       <!-- end -->
       <!-- name -->
       <label

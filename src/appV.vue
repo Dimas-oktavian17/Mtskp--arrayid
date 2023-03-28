@@ -135,17 +135,16 @@ export default {
               type="text"
               name="username"
               class="bg-gray-50 mb-2 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#FE5E44] focus:border-[#FE5E44] block w-full p-2.5"
-              placeholder="myLove"
+              placeholder="Username"
             />
-
             <!-- end -->
             <!-- name -->
             <label
               for="password"
               class="block mb-2 text-sm font-medium text-gray-900 font-header"
             >
-              Password</label
-            >
+              Password
+            </label>
             <input
               required
               v-model="user.password"
@@ -165,10 +164,6 @@ export default {
           </button>
         </form>
       </div>
-
-      <!-- <input type="text" id="username" v-model="user.username" required />
-      <input type="password" id="password" v-model="user.password" required />
-      <button @click="login()">send</button> -->
     </div>
     <!-- web display -->
     <div class="relative hidden" id="main">

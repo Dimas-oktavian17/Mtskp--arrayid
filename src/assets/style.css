@@ -610,14 +610,6 @@ video {
   top: 0.75rem;
 }
 
-.-top-\[13px\] {
-  top: -13px;
-}
-
-.top-\[3155px\] {
-  top: 3155px;
-}
-
 .z-\[999\] {
   z-index: 999;
 }
@@ -748,10 +740,6 @@ video {
   height: 1227px;
 }
 
-.h-20 {
-  height: 5rem;
-}
-
 .h-\[50px\] {
   height: 50px;
 }
@@ -762,14 +750,6 @@ video {
 
 .h-\[94px\] {
   height: 94px;
-}
-
-.h-\[2080px\] {
-  height: 2080px;
-}
-
-.h-40 {
-  height: 10rem;
 }
 
 .w-32 {
@@ -816,10 +796,6 @@ video {
   width: 0.5rem;
 }
 
-.w-20 {
-  width: 5rem;
-}
-
 .w-\[50px\] {
   width: 50px;
 }
@@ -830,10 +806,6 @@ video {
 
 .w-\[94px\] {
   width: 94px;
-}
-
-.w-40 {
-  width: 10rem;
 }
 
 .max-w-xs {
@@ -860,7 +832,7 @@ video {
   transform-origin: right;
 }
 
-.rotate-\[0deg\] {
+.rotate-0 {
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -872,11 +844,6 @@ video {
 
 .rotate-45 {
   --tw-rotate: 45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.rotate-0 {
-  --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1061,10 +1028,6 @@ video {
 
 .overflow-hidden {
   overflow: hidden;
-}
-
-.overflow-x-hidden {
-  overflow-x: hidden;
 }
 
 .scroll-smooth {
@@ -1321,10 +1284,6 @@ video {
   padding-top: 30rem;
 }
 
-.pt-\[4\.938rem\] {
-  padding-top: 4.938rem;
-}
-
 .pl-10 {
   padding-left: 2.5rem;
 }
@@ -1405,11 +1364,6 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-
-.text-5xl {
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-base {
@@ -1914,10 +1868,6 @@ video {
 
   .lg\:w-\[98\%\] {
     width: 98%;
-  }
-
-  .lg\:w-10 {
-    width: 2.5rem;
   }
 
   .lg\:scroll-mt-72 {
