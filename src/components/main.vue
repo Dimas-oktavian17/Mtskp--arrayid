@@ -4,9 +4,11 @@ export default {
   components: {},
   data() {
     return {
-      Title: "Expression",
-      Head: "Sebuah Expression dari dalam diri, tapi binggung menyampaikanya!",
+      Head: "Social Media Tool Yang Akan Memberikan Kamu Insight Apapun",
     };
+  },
+  props: {
+    Title: String,
   },
 };
 </script>
@@ -35,6 +37,7 @@ export default {
       class="flex flex-col items-start justify-center lg:items-center lg:w-4/5"
     >
       <h1
+        :Title="Title"
         class="pb-5 pl-10 font-semibold text-left xxs:text-xs sm:text-base lg:pl-0 lg:text-center font-header text-homeSecondary"
       >
         {{ Title }}
@@ -47,8 +50,8 @@ export default {
       <p
         class="pt-[2.125rem] pl-10 sm:pr-8 lg:px-32 xl:px-[16rem] font-header font-normal text-lg text-left lg:text-center text-white order-4 pb-[3.75rem]"
       >
-        Adalah benar apa yang kamu baca barusan. Expression yang mainstream akan
-        mengungkapkan pada sebuah chat, karena kami anti-mainstream maka kami
+        Adalah benar apa yang kamu baca barusan. Tool yang mainstream akan
+        memberikan kamu insight biasa, karena kami anti-mainstream maka kami
         akan melakukan sebaliknya.
       </p>
       <div

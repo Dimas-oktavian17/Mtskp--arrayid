@@ -135,7 +135,6 @@ export default {
             </div>
           </button>
         </div>
-
         <div
           :class="{ hidden: navOpen }"
           class="items-center justify-between w-full backdrop-blur-md md:backdrop-blur-0 md:flex md:w-auto md:order-1"

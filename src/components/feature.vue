@@ -3,8 +3,8 @@ import { ref } from "vue";
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
 // import image
-import insighfull from "../assets/feature/insightfull.svg";
-import openmind from "../assets/feature/openmind.svg";
+import database from "../assets/feature/database.svg";
+import server from "../assets/feature/server.svg";
 import encorage from "../assets/feature/encorage.svg";
 import envirotment from "../assets/feature/envirotment.svg";
 // // Import Swiper styles
@@ -33,11 +33,11 @@ export default {
             "flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem] bg-[#FFFFFF08]",
           style:
             "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]",
-          title: "Insightful",
-          img: insighfull,
+          title: "Database",
+          img: database,
           deskripsi:
-            "Terdengar narsis?, terserah persepsi kamu. Dengan pengetahuan " +
-            "mungkin kami bisa berbagi & membantu'mu meskipun random.",
+            "Data insight yang banyak kan bakal disimpen di database, " +
+            "dengan kualitas yang luar biasa.",
         },
         {
           styleP:
@@ -48,12 +48,10 @@ export default {
             "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
           style:
             "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
-          title: "Open Minded",
-          img: openmind,
+          title: "Server",
+          img: server,
           deskripsi:
-            "Apa benar?, tentu. Kami siap menerima masukan & saran jika itu " +
-            "bermanfaat & selalu sedia jika kamu ingin diskusi penting " +
-            "atau random.",
+            "Dibekali dengan server yang sangat cepat dan berkualitas, cocok untuk kebutuhan kamu",
         },
         {
           styleP:
@@ -64,11 +62,11 @@ export default {
             "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
           style:
             "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
-          title: "Encourage",
+          title: "Fast",
           img: encorage,
           deskripsi:
-            "Waktu selalu berputar, lalu?. Kami selalu berusaha mendorong diri " +
-            "kamu, untuk berkembang & berubah kearah yang lebih baik.",
+            "Waktu selalu berputar, lalu?. Kami selalu berusaha memberi layanan tercepat " +
+            "maksimal untuk kamu.",
         },
         {
           styleP:
@@ -82,9 +80,7 @@ export default {
           title: "Environment",
           img: envirotment,
           deskripsi:
-            "toxic relationship?, katakan tidak. Lingkungan relationship " +
-            "merupakan suatu hal yang penting, kami selalu mendukung apapun " +
-            "keputusan & tindakan jika itu positif.",
+            "Dibuat menggunakan teknologi ramah lingkungan, dengan begitu tidak perlu khawatir akan penggunaanya.",
         },
       ],
       boxFeatureOne: [
@@ -94,12 +90,12 @@ export default {
           styleIcon:
             "flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem] bg-[#FFFFFF08]",
           style:
-            "cursor-pointer flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]",
-          title: "Insightful",
-          img: insighfull,
+            "cursor-pointer  flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]",
+          title: "Database",
+          img: database,
           deskripsi:
-            "Terdengar narsis?, terserah persepsi kamu. Dengan pengetahuan " +
-            "mungkin kami bisa berbagi & membantu'mu meskipun random.",
+            "Data insight yang banyak kan bakal disimpen di database, " +
+            "dengan kualitas yang luar biasa.",
         },
         {
           styleP:
@@ -109,31 +105,26 @@ export default {
           styleIcon:
             "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
           style:
-            "cursor-pointer flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
-          title: "Open Minded",
-          img: openmind,
+            "cursor-pointer  flex flex-col items-start p-[1.094rem] lg:p-[2.188rem]  transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
+          title: "Server",
+          img: server,
           deskripsi:
-            "Apa benar?, tentu. Kami siap menerima masukan & saran jika itu " +
-            "bermanfaat & selalu sedia jika kamu ingin diskusi penting atau " +
-            "random.",
+            "Dibekali dengan server yang sangat cepat dan berkualitas, cocok untuk kebutuhan kamu setiap saat",
         },
       ],
       boxFeatureTwo: [
         {
-          // style: "group-hover:stroke-whitegroup-hover:stroke-white",
-          title: "Encourage",
+          title: "Fast",
           img: encorage,
           deskripsi:
-            "Waktu selalu berputar, lalu?. Kami selalu berusaha mendorong diri " +
-            "kamu, untuk berkembang & berubah kearah yang lebih baik.",
+            "Waktu selalu berputar, lalu?. Kami selalu berusaha memberi layanan tercepat " +
+            "maksimal untuk kamu.",
         },
         {
           title: "Environment",
           img: envirotment,
           deskripsi:
-            "toxic relationship?, katakan tidak. Lingkungan relationship " +
-            "merupakan suatu hal yang penting, kami selalu mendukung apapun " +
-            "keputusan & tindakan jika itu positif.",
+            "Dibuat menggunakan teknologi ramah lingkungan, dengan begitu tidak perlu khawatir akan penggunaanya.",
         },
       ],
     };

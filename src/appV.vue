@@ -9,13 +9,12 @@ export default {
     return {
       dataFeature: {
         head: "KENAPA SIH?",
-        title: "Kenapa Kamu Harus Pilih Okta?",
+        title: "Kenapa Kami Memberikan Insight Apapun?",
         deskripsi:
-          "Di sini kita akan klarifikasi mengapa kamu harus memilih okta, ngga " +
-          "wajib sih. " +
-          "Masih mau baca?, yaudah ini penjelasan'nya.",
+          "Di sini kita akan klarifikasi mengapa kita akan memberikan insight apapun di tool ini kepada kamu. " +
+          "Pada dasarnya hal ini kami lakukan semata-mata ingin menyelamatkan planet bumi.",
       },
-      text: "Expression",
+      text: "MSTSKP",
       user: {
         username: "",
         password: "",
@@ -32,13 +31,12 @@ export default {
       let main = document.querySelector("#main");
       let animate = document.querySelector('[aria-label="animation"]');
       let sec = document.querySelector("section");
-
       // localStorage.setItem("data", JSON.stringify(this.user));
       localStorage.setItem("username", this.user.username);
       localStorage.setItem("pw", this.user.password);
       if (
-        this.user.username === "mslove" &&
-        this.user.password === "mslove123"
+        this.user.username === "username" &&
+        this.user.password === "username123"
       ) {
         localStorage.setItem("role", "admin");
         let loaded = setInterval(() => {
@@ -71,7 +69,7 @@ export default {
     let user = localStorage.getItem("username");
     let sandi = localStorage.getItem("pw");
 
-    if (user === "mslove" && sandi === "mslove123") {
+    if (user === "username" && sandi === "username123") {
       localStorage.setItem("role", "admin");
       let loaded = setInterval(() => {
         animate.classList.remove("hidden");
@@ -193,13 +191,12 @@ export default {
           :headFeature="dataFeature.head"
           :titleFeature="dataFeature.title"
           :deskripsiFeature="dataFeature.deskripsi"
-        ></featureVue>
+        >
+        </featureVue>
         <!-- end wrapper feature-->
         <!-- wrapper reasons -->
-        <reason
-          :headReason="dataReason.head"
-          :titleReason="dataReason.title"
-        ></reason>
+        <reason :headReason="dataReason.head" :titleReason="dataReason.title">
+        </reason>
         <!-- end wrapper reasons -->
       </div>
       <home></home>

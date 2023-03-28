@@ -980,6 +980,10 @@ video {
   gap: 0.75rem;
 }
 
+.gap-\[2\.1188rem\] {
+  gap: 2.1188rem;
+}
+
 .-space-x-12 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(-3rem * var(--tw-space-x-reverse));
@@ -1870,6 +1874,10 @@ video {
     width: 98%;
   }
 
+  .lg\:w-1\/2 {
+    width: 50%;
+  }
+
   .lg\:scroll-mt-72 {
     scroll-margin-top: 18rem;
   }
@@ -1984,6 +1992,10 @@ video {
     width: 60px;
   }
 
+  .xl\:p-\[2\.388rem\] {
+    padding: 2.388rem;
+  }
+
   .xl\:px-52 {
     padding-left: 13rem;
     padding-right: 13rem;
@@ -1992,6 +2004,11 @@ video {
   .xl\:px-\[16rem\] {
     padding-left: 16rem;
     padding-right: 16rem;
+  }
+
+  .xl\:px-56 {
+    padding-left: 14rem;
+    padding-right: 14rem;
   }
 
   .xl\:pl-0 {
