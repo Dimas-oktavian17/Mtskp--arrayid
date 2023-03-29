@@ -21,7 +21,7 @@ export default {
       },
       dataReason: {
         head: "TERUS GIMANA?",
-        title: "Terus Ngapain Dong Kalo Nggak Wajib Milih?",
+        title: "Terus Kenapa Harus Wajib Milih?",
       },
     };
   },

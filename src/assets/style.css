@@ -561,6 +561,25 @@ video {
   padding-bottom: 2rem;
 }
 
+.on > div > p:nth-child(1) {
+  transform-origin: bottom left;
+  --tw-rotate: 45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.on > div > p:nth-child(2) {
+  --tw-scale-x: 0;
+  --tw-scale-y: 0;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.on > div > p:nth-child(3) {
+  width: 30px;
+  transform-origin: top left;
+  --tw-rotate: -45deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -698,6 +717,10 @@ video {
 
 .inline-flex {
   display: inline-flex;
+}
+
+.contents {
+  display: contents;
 }
 
 .hidden {
@@ -892,6 +915,10 @@ video {
   flex-direction: column;
 }
 
+.flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
@@ -978,10 +1005,6 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
-}
-
-.gap-\[2\.1188rem\] {
-  gap: 2.1188rem;
 }
 
 .-space-x-12 > :not([hidden]) ~ :not([hidden]) {
@@ -1284,6 +1307,11 @@ video {
   padding-right: 2.5rem;
 }
 
+.py-\[25px\] {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
 .pt-\[30rem\] {
   padding-top: 30rem;
 }
@@ -1342,6 +1370,14 @@ video {
 
 .pb-8 {
   padding-bottom: 2rem;
+}
+
+.pb-4 {
+  padding-bottom: 1rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .text-left {
@@ -1473,6 +1509,10 @@ video {
 .text-secondary {
   --tw-text-opacity: 1;
   color: rgb(12 27 77 / var(--tw-text-opacity));
+}
+
+.text-dark {
+  color: rgba(12, 27, 77, 1);
 }
 
 .opacity-60 {
@@ -1974,6 +2014,10 @@ video {
     padding-right: 0px;
   }
 
+  .lg\:pl-4 {
+    padding-left: 1rem;
+  }
+
   .lg\:text-center {
     text-align: center;
   }
@@ -1992,10 +2036,6 @@ video {
     width: 60px;
   }
 
-  .xl\:p-\[2\.388rem\] {
-    padding: 2.388rem;
-  }
-
   .xl\:px-52 {
     padding-left: 13rem;
     padding-right: 13rem;
@@ -2004,11 +2044,6 @@ video {
   .xl\:px-\[16rem\] {
     padding-left: 16rem;
     padding-right: 16rem;
-  }
-
-  .xl\:px-56 {
-    padding-left: 14rem;
-    padding-right: 14rem;
   }
 
   .xl\:pl-0 {

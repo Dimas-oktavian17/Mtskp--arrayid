@@ -4,9 +4,9 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // image
-import love from "../../assets/reason/love.png";
-import sabar from "../../assets/reason/sabar.svg";
-import ayam from "../../assets/reason/ayam.png";
+import secure from "../../assets/reason/secure.svg";
+import chart from "../../assets/reason/chart.svg";
+import waktu from "../../assets/reason/jam.svg";
 // Import Swiper styles
 import "swiper/css";
 
@@ -28,28 +28,26 @@ export default {
 
       reasonBox: [
         {
-          picture: love,
-          title: "Kamu Jodoh Kami",
+          picture: secure,
+          title: "Terpercaya",
           deskripsi:
-            "Sudah pasti orang yang tidak " +
-            "punya kekasih & jodoh kami " +
-            "mengunjungi website ini.",
+            "Sudah terpacaya ribuan tahun " +
+            "dan telah melayani berbagai macam kebutuhan " +
+            "diseluruh dunia.",
         },
         {
-          picture: sabar,
-          title: "Kamu Sabar",
+          picture: chart,
+          title: "Terbukti",
           deskripsi:
-            "Sudah pasti orang yang tidak sabar, " +
-            "tidak akan membaca website ini. " +
-            "jadi orang yang sabar itu disayang tuhan & kami.",
+            "Sudah terbukti menaikan produktivitas, " +
+            "dan menaikan telah pendapatan perusahaan diseluruh dunia.",
         },
         {
-          picture: ayam,
-          title: "Kok Gambar Ayam? ",
+          picture: waktu,
+          title: "Selalu siap",
           deskripsi:
-            "Lah ngatur. " +
-            "Nggak tau lagi alasan yang ketiga, biar bagus aja " +
-            "desainnya. Kalo cuman dua jadinya nggak bagus hehe.",
+            "Selalu siap menanggani berbagai keluhan dan komplain dari client, " +
+            "bersama-sama kita tumbuh.",
         },
       ],
     };
@@ -58,12 +56,6 @@ export default {
     headReason: String,
     titleReason: String,
   },
-  // methods: {
-  //   getUrl(e) {
-  //     const file = e.target.files[0];
-  //     this.reasonBox.picture = URL.createObjectURL(file);
-  //   },
-  // },
 };
 </script>
 <template>
@@ -89,9 +81,9 @@ export default {
       <p
         class="order-3 text-base text-left lg:text-center font-header text-homePrimary opacity-60 lg:px-56"
       >
-        Ya nggak tau, salah kamu sendiri ngapain ke website ini. Tapi ada tiga
-        kemungkinan kenapa kamu bisa ada di website ini. Ketiga kemungkinan itu
-        akan kami jabarkan di bawah ini dengan ilustrasinya hehehe.
+        Terdapat tiga kemungkinan yang membuat kamu harus memilih kami. Ketiga
+        kemungkinan itu akan kami jabarkan di bawah ini dengan ilustrasinya
+        hehehe.
       </p>
     </div>
     <!-- end head wrapper -->

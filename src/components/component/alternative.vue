@@ -5,7 +5,7 @@ export default {
   data() {
     return {
       title: "ALTERNATIVES",
-      deskripsi: "Karena Kami Ini Nggak Ada Apa-Apanya, Lebih Baik Cari Lain!",
+      deskripsi: "Karena Kami Ini Cuma Fiktif, Maka Lebih Baik Cari Lain!",
     };
   },
 };
@@ -35,11 +35,15 @@ export default {
               fill="white"
             />
           </svg>
-          <h1 class="order-1 text-base font-semibold text-white font-header">
+          <h1
+            class="order-1 text-base font-semibold text-white lg:pl-4 xl:pl-0 font-header"
+          >
             {{ title }}
           </h1>
         </div>
-        <p class="order-2 text-4xl font-bold text-white font-header">
+        <p
+          class="order-2 text-4xl font-bold text-white lg:pl-4 xl:pl-0 font-header"
+        >
           {{ deskripsi }}
         </p>
       </div>
@@ -47,8 +51,9 @@ export default {
       <p
         class="order-1 w-full pr-8 text-base font-normal text-white font-header grow lg:w-2/5 lg:pr-0"
       >
-        Seperti yang kamu tau, kami cuma cowo" biasa. Barangkali kamu udah
-        serius cari cowo, maka lebih baik cari cowo lain.
+        Seperti yang kamu tau, website ini merupakan sekedar slincing desain
+        dari Figma yang dibuat oleh youtuber @arrayid . Berikut alternative yang
+        sesuai dengan kebutuhan kamu.
       </p>
     </div>
     <!-- end header -->
