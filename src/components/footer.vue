@@ -73,8 +73,8 @@ export default {
           </h1>
         </div>
         <p class="order-1 text-lg font-normal text-homePrimary font-header">
-          Sebenernya banyak banget cowo yang lebih bagus dari okta, maka dari
-          itu lebih baik pilih cowo lain aja.
+          MSTKP merupakan sebuah website hasil dari slincing desain Figma dari
+          @arrayid & dibuat oleh okta menggunakan framework Vuejs.
         </p>
         <p
           v-for="lisense in lisensi"
