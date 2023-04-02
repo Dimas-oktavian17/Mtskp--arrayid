@@ -1,12 +1,5 @@
-<script>
+<script setup>
 import { KinesisContainer, KinesisElement } from "vue-kinesis";
-export default {
-  name: "kinesisHomeTwo",
-  components: {
-    KinesisContainer,
-    KinesisElement,
-  },
-};
 </script>
 <template>
   <kinesis-container>

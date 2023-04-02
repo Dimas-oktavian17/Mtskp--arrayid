@@ -1,16 +1,12 @@
-<script>
-export default {
-  name: "mainVue",
-  components: {},
-  data() {
-    return {
-      Head: "Social Media Tool Yang Akan Memberikan Kamu Insight Apapun",
-    };
-  },
-  props: {
-    Title: String,
-  },
-};
+<script setup>
+import { defineProps, ref } from "vue";
+// Props
+defineProps({
+  Title: String,
+});
+const subTitle = ref(
+  "Social Media Tool Yang Akan Memberikan Kamu Insight Apapun"
+);
 </script>
 <template>
   <!-- Home -->
@@ -45,7 +41,7 @@ export default {
       <h2
         class="order-2 pl-10 lg:px-24 xl:px-52 text-4xl sm:text-[3rem] leading-none font-normal lg:text-center text-left text-white font-header"
       >
-        {{ Head }}
+        {{ subTitle }}
       </h2>
       <p
         class="pt-[2.125rem] pl-10 sm:pr-8 lg:px-32 xl:px-[16rem] font-header font-normal text-lg text-left lg:text-center text-white order-4 pb-[3.75rem]"

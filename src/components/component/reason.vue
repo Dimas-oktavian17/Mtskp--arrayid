@@ -1,62 +1,49 @@
-<script>
-import { ref } from "vue";
-// Import Swiper Vue.js components
+<script setup>
+import { ref, reactive } from "vue";
+// Import Swiper & css Vue.js components
+import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
-
+import "swiper/css";
+import "swiper/css/pagination";
+import "../../assets/swipper.css";
 // image
 import secure from "../../assets/reason/secure.svg";
 import chart from "../../assets/reason/chart.svg";
 import waktu from "../../assets/reason/jam.svg";
-// Import Swiper styles
-import "swiper/css";
-
-import "swiper/css/pagination";
-
-import "../../assets/swipper.css";
-
-// import required modules
-import { Pagination } from "swiper";
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  data() {
-    return {
-      modules: [Pagination],
-
-      reasonBox: [
-        {
-          picture: secure,
-          title: "Terpercaya",
-          deskripsi:
-            "Sudah terpacaya ribuan tahun " +
-            "dan telah melayani berbagai macam kebutuhan " +
-            "diseluruh dunia.",
-        },
-        {
-          picture: chart,
-          title: "Terbukti",
-          deskripsi:
-            "Sudah terbukti menaikan produktivitas, " +
-            "dan menaikan telah pendapatan perusahaan diseluruh dunia.",
-        },
-        {
-          picture: waktu,
-          title: "Selalu siap",
-          deskripsi:
-            "Selalu siap menanggani berbagai keluhan dan komplain dari client, " +
-            "bersama-sama kita tumbuh.",
-        },
-      ],
-    };
-  },
-  props: {
-    headReason: String,
-    titleReason: String,
-  },
-};
+// props
+// in <script setup>
+defineProps({
+  headReason: String,
+  titleReason: String,
+});
+// data with script setup
+const data = reactive({
+  modules: [Pagination],
+  reasonBox: [
+    {
+      picture: secure,
+      title: "Terpercaya",
+      deskripsi:
+        "Sudah terpacaya ribuan tahun " +
+        "dan telah melayani berbagai macam kebutuhan " +
+        "diseluruh dunia.",
+    },
+    {
+      picture: chart,
+      title: "Terbukti",
+      deskripsi:
+        "Sudah terbukti menaikan produktivitas, " +
+        "dan menaikan telah pendapatan perusahaan diseluruh dunia.",
+    },
+    {
+      picture: waktu,
+      title: "Selalu siap",
+      deskripsi:
+        "Selalu siap menanggani berbagai keluhan dan komplain dari client, " +
+        "bersama-sama kita tumbuh.",
+    },
+  ],
+});
 </script>
 <template>
   <!-- wrapper reasons -->
@@ -93,7 +80,7 @@ export default {
     >
       <!-- box one -->
       <div
-        v-for="reasonBoxs in reasonBox"
+        v-for="reasonBoxs in data.reasonBox"
         :key="reasonBoxs"
         class="flex flex-col items-center gap-3"
       >
@@ -122,7 +109,7 @@ export default {
     </div>
     <!-- swipper active if in mobile web -->
     <swiper class="flex flex-col items-start lg:hidden">
-      <swiper-slide v-for="reasonBoxs in reasonBox" :key="reasonBoxs">
+      <swiper-slide v-for="reasonBoxs in data.reasonBox" :key="reasonBoxs">
         <!-- box one -->
         <div class="flex flex-col items-center gap-3 lg:items-start">
           <!-- svg -->

@@ -1,35 +1,34 @@
-<script>
+<script setup>
+// import
+import { defineProps, reactive } from "vue";
 import expression from "../../assets/expression/Expression.webp";
 import buffer from "../../assets/expression/buffer.png";
 import sendible from "../../assets/expression/sendible.png";
-export default {
-  components: {},
+// props
+defineProps({
   props: ["inputText"],
-  data() {
-    return {
-      expresion: {
-        src: expression,
-        alt: "Expression",
-      },
-      content: [
-        {
-          figure: buffer,
-          title:
-            "Buffer.com – Buffer is the most intuitive, affordable, and authentic way to reach more people on social media.",
-          link: "Learn More",
-          href: "https://buffer.com/",
-        },
-        {
-          figure: sendible,
-          title:
-            "Sendible.com – Grow your audience, attract new customers, and reach your social media goals with an all-in-one platform.",
-          link: "Learn More",
-          href: "https://www.sendible.com/",
-        },
-      ],
-    };
+});
+// reactive
+// const expresion = reactive({
+//   src: expression,
+//   alt: "Expression",
+// });
+const content = reactive([
+  {
+    figure: buffer,
+    title:
+      "Buffer.com – Buffer is the most intuitive, affordable, and authentic way to reach more people on social media.",
+    link: "Learn More",
+    href: "https://buffer.com/",
   },
-};
+  {
+    figure: sendible,
+    title:
+      "Sendible.com – Grow your audience, attract new customers, and reach your social media goals with an all-in-one platform.",
+    link: "Learn More",
+    href: "https://www.sendible.com/",
+  },
+]);
 </script>
 <template>
   <!-- expresion wrapper -->

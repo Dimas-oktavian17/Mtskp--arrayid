@@ -1,40 +1,37 @@
-<script>
+<script setup>
+// import vue
+import { defineProps, reactive } from "vue";
 // import svg medsos
 import github from "../assets/footer/github.svg";
 import tele from "../assets/footer/tele.svg";
-export default {
-  name: "footerVue",
-  components: {},
-  props: {
-    title: String,
-  },
-  data() {
-    return {
-      sitemap: [
-        { title: "Beranda", link: "#beranda" },
-        { title: "Features", link: "#features" },
-        { title: "Reasons", link: "#reasons" },
-        { title: "Alternatives", link: "#alternatives" },
-      ],
-      lisensi: [
-        { title: "COPYRIGHT (C) 2021. DESIGN BY NAUVAL" },
-        { title: "COPYRIGHT (C) 2023. CREATE BY OKTA" },
-      ],
-      constact: [
-        {
-          label: "Telegram Profile",
-          link: "https://t.me/DmsOkr",
-          img: tele,
-        },
-        {
-          label: "Github Profile",
-          link: "https://github.com/Dimas-oktavian17",
-          img: github,
-        },
-      ],
-    };
-  },
-};
+// props
+defineProps({
+  title: String,
+});
+const data = reactive({
+  sitemap: [
+    { title: "Beranda", link: "#beranda" },
+    { title: "Features", link: "#features" },
+    { title: "Reasons", link: "#reasons" },
+    { title: "Alternatives", link: "#alternatives" },
+  ],
+  lisensi: [
+    { title: "COPYRIGHT (C) 2021. DESIGN BY NAUVAL" },
+    { title: "COPYRIGHT (C) 2023. CREATE BY OKTA" },
+  ],
+  constact: [
+    {
+      label: "Telegram Profile",
+      link: "https://t.me/DmsOkr",
+      img: tele,
+    },
+    {
+      label: "Github Profile",
+      link: "https://github.com/Dimas-oktavian17",
+      img: github,
+    },
+  ],
+});
 </script>
 <template>
   <!-- footer section -->
@@ -77,7 +74,7 @@ export default {
           @arrayid & dibuat oleh okta menggunakan framework Vuejs.
         </p>
         <p
-          v-for="lisense in lisensi"
+          v-for="lisense in data.lisensi"
           :key="lisense"
           class="order-2 text-sm font-semibold tracking-widest font-header text-homePrimary"
         >
@@ -90,7 +87,7 @@ export default {
         <div class="flex flex-col items-start gap-[10px] order-1">
           <ul class="flex flex-col gap-4">
             <li
-              v-for="sitemaps in sitemap"
+              v-for="sitemaps in data.sitemap"
               :key="sitemaps"
               class="text-base font-normal font-header text-homePrimary"
             >
@@ -114,7 +111,7 @@ export default {
         >
           <!-- medsos box -->
           <div
-            v-for="constacts in constact"
+            v-for="constacts in data.constact"
             :key="constacts"
             class="group flex flex-row justify-center items-center p-2 gap-[10px] w-10 h-10 bg-bg-icon rounded-md cursor-pointer transition-all duration-1000"
           >

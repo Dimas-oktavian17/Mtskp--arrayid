@@ -1,140 +1,129 @@
-<script>
-import { ref } from "vue";
-// Import Swiper Vue.js components
+<script setup>
+import { defineProps, reactive } from "vue";
+// Import Swiper,css Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "../assets/swipper.css";
+import { Pagination } from "swiper";
 // import image
 import database from "../assets/feature/database.svg";
 import server from "../assets/feature/server.svg";
 import encorage from "../assets/feature/encorage.svg";
 import envirotment from "../assets/feature/envirotment.svg";
 // // Import Swiper styles
-import "swiper/css";
-
-import "swiper/css/pagination";
-
-import "../assets/swipper.css";
-
-// import required modules
-import { Pagination } from "swiper";
-export default {
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
-  data() {
-    return {
-      boxClass: true,
-      modules: [Pagination],
-      swipperBox: [
-        {
-          styleP: "order-1 text-base font-normal text-white",
-          styleH1: "order-1 text-base font-semibold text-white font-header",
-          styleIcon:
-            "flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem] bg-[#FFFFFF08]",
-          style:
-            "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]",
-          title: "Database",
-          img: database,
-          deskripsi:
-            "Data insight yang banyak kan bakal disimpen di database, " +
-            "dengan kualitas yang luar biasa.",
-        },
-        {
-          styleP:
-            "order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000",
-          styleH1:
-            "order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000",
-          styleIcon:
-            "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
-          style:
-            "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
-          title: "Server",
-          img: server,
-          deskripsi:
-            "Dibekali dengan server yang sangat cepat dan berkualitas, cocok untuk kebutuhan kamu",
-        },
-        {
-          styleP:
-            "order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000",
-          styleH1:
-            "order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000",
-          styleIcon:
-            "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
-          style:
-            "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
-          title: "Fast",
-          img: encorage,
-          deskripsi:
-            "Waktu selalu berputar, lalu?. Kami selalu berusaha memberi layanan tercepat " +
-            "maksimal untuk kamu.",
-        },
-        {
-          styleP:
-            "order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000",
-          styleH1:
-            "order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000",
-          styleIcon:
-            "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
-          style:
-            "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
-          title: "Environment",
-          img: envirotment,
-          deskripsi:
-            "Dibuat menggunakan teknologi ramah lingkungan, dengan begitu tidak perlu khawatir akan penggunaanya.",
-        },
-      ],
-      boxFeatureOne: [
-        {
-          styleP: "order-1 text-base font-normal text-white",
-          styleH1: "order-1 text-base font-semibold text-white font-header",
-          styleIcon:
-            "flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem] bg-[#FFFFFF08]",
-          style:
-            "cursor-pointer  flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]",
-          title: "Database",
-          img: database,
-          deskripsi:
-            "Data insight yang banyak kan bakal disimpen di database, " +
-            "dengan kualitas yang luar biasa.",
-        },
-        {
-          styleP:
-            "order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000",
-          styleH1:
-            "order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000",
-          styleIcon:
-            "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
-          style:
-            "cursor-pointer  flex flex-col items-start p-[1.094rem] lg:p-[2.188rem]  transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
-          title: "Server",
-          img: server,
-          deskripsi:
-            "Dibekali dengan server yang sangat cepat dan berkualitas, cocok untuk kebutuhan kamu setiap saat",
-        },
-      ],
-      boxFeatureTwo: [
-        {
-          title: "Fast",
-          img: encorage,
-          deskripsi:
-            "Waktu selalu berputar, lalu?. Kami selalu berusaha memberi layanan tercepat " +
-            "maksimal untuk kamu.",
-        },
-        {
-          title: "Environment",
-          img: envirotment,
-          deskripsi:
-            "Dibuat menggunakan teknologi ramah lingkungan, dengan begitu tidak perlu khawatir akan penggunaanya.",
-        },
-      ],
-    };
-  },
-  props: {
-    headFeature: String,
-    titleFeature: String,
-    deskripsiFeature: String,
-  },
-};
+// props
+defineProps({
+  headFeature: String,
+  titleFeature: String,
+  deskripsiFeature: String,
+});
+// data
+const data = reactive({
+  modules: [Pagination],
+  swipperBox: [
+    {
+      styleP: "order-1 text-base font-normal text-white",
+      styleH1: "order-1 text-base font-semibold text-white font-header",
+      styleIcon:
+        "flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem] bg-[#FFFFFF08]",
+      style:
+        "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]",
+      title: "Database",
+      img: database,
+      deskripsi:
+        "Data insight yang banyak kan bakal disimpen di database, " +
+        "dengan kualitas yang luar biasa.",
+    },
+    {
+      styleP:
+        "order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000",
+      styleH1:
+        "order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000",
+      styleIcon:
+        "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
+      style:
+        "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
+      title: "Server",
+      img: server,
+      deskripsi:
+        "Dibekali dengan server yang sangat cepat dan berkualitas, cocok untuk kebutuhan kamu",
+    },
+    {
+      styleP:
+        "order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000",
+      styleH1:
+        "order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000",
+      styleIcon:
+        "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
+      style:
+        "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
+      title: "Fast",
+      img: encorage,
+      deskripsi:
+        "Waktu selalu berputar, lalu?. Kami selalu berusaha memberi layanan tercepat " +
+        "maksimal untuk kamu.",
+    },
+    {
+      styleP:
+        "order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000",
+      styleH1:
+        "order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000",
+      styleIcon:
+        "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
+      style:
+        "cursor-pointer max-w-xs flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
+      title: "Environment",
+      img: envirotment,
+      deskripsi:
+        "Dibuat menggunakan teknologi ramah lingkungan, dengan begitu tidak perlu khawatir akan penggunaanya.",
+    },
+  ],
+  boxFeatureOne: [
+    {
+      styleP: "order-1 text-base font-normal text-white",
+      styleH1: "order-1 text-base font-semibold text-white font-header",
+      styleIcon:
+        "flex flex-row justify-center items-center p-[0.625rem] rounded-[0.313rem] bg-[#FFFFFF08]",
+      style:
+        "cursor-pointer  flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] gap-[1.1188rem] bg-homePrimary rounded-[0.625rem]",
+      title: "Database",
+      img: database,
+      deskripsi:
+        "Data insight yang banyak kan bakal disimpen di database, " +
+        "dengan kualitas yang luar biasa.",
+    },
+    {
+      styleP:
+        "order-1 text-base font-normal text-homePrimary opacity-60 group-hover:text-white group-hover:transition-all group-hover:duration-1000",
+      styleH1:
+        "order-1 text-base font-semibold text-homePrimary group-hover:text-white font-header group-hover:transition-all group-hover:duration-1000",
+      styleIcon:
+        "group flex flex-row justify-center items-center p-[0.625rem] group-hover:bg-[#FFFFFF08] group-hover:transition-all group-hover:duration-1000 bg-[#ffe9d6] rounded-[0.313rem]",
+      style:
+        "cursor-pointer  flex flex-col items-start p-[1.094rem] lg:p-[2.188rem]  transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]",
+      title: "Server",
+      img: server,
+      deskripsi:
+        "Dibekali dengan server yang sangat cepat dan berkualitas, cocok untuk kebutuhan kamu setiap saat",
+    },
+  ],
+  boxFeatureTwo: [
+    {
+      title: "Fast",
+      img: encorage,
+      deskripsi:
+        "Waktu selalu berputar, lalu?. Kami selalu berusaha memberi layanan tercepat " +
+        "maksimal untuk kamu.",
+    },
+    {
+      title: "Environment",
+      img: envirotment,
+      deskripsi:
+        "Dibuat menggunakan teknologi ramah lingkungan, dengan begitu tidak perlu khawatir akan penggunaanya.",
+    },
+  ],
+});
 </script>
 <template>
   <!-- wrapper feature -->
@@ -228,7 +217,7 @@ export default {
       <div class="flex flex-row items-start gap-[1px]">
         <!-- box one -->
         <div
-          v-for="boxfeatureFirst in boxFeatureOne"
+          v-for="boxfeatureFirst in data.boxFeatureOne"
           :key="boxfeatureFirst"
           :class="boxfeatureFirst.style"
         >
@@ -238,7 +227,6 @@ export default {
             <div :class="boxfeatureFirst.styleIcon">
               <inline-svg :src="boxfeatureFirst.img"></inline-svg>
             </div>
-
             <h1 :class="boxfeatureFirst.styleH1">
               {{ boxfeatureFirst.title }}
             </h1>
@@ -253,7 +241,7 @@ export default {
       <div class="flex flex-row items-start gap-[1px]">
         <!-- box three -->
         <div
-          v-for="boxfeatureSecond in boxFeatureTwo"
+          v-for="boxfeatureSecond in data.boxFeatureTwo"
           :key="boxfeatureSecond"
           class="cursor-pointer w-1/2 flex flex-col items-start p-[1.094rem] lg:p-[2.188rem] transition-all gap-[1.1188rem] bg-transparent group hover:bg-homePrimary rounded-[0.625rem]"
         >
@@ -284,7 +272,7 @@ export default {
     </div>
     <!-- swipper mobile mode -->
     <swiper class="flex flex-col items-start lg:hidden">
-      <swiper-slide v-for="swipperItems in swipperBox" :key="swipperItems">
+      <swiper-slide v-for="swipperItems in data.swipperBox" :key="swipperItems">
         <div :class="swipperItems.style">
           <!-- header -->
           <div class="flex flex-row items-center gap-[1.313rem]">

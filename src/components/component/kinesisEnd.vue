@@ -1,12 +1,5 @@
-<script>
+<script setup>
 import { KinesisContainer, KinesisElement } from "vue-kinesis";
-export default {
-  name: "kinesisEnd",
-  components: {
-    KinesisContainer,
-    KinesisElement,
-  },
-};
 </script>
 <template>
   <KinesisContainer>

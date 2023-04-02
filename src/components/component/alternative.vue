@@ -1,14 +1,9 @@
-<script>
-export default {
-  name: "alternative",
-  components: {},
-  data() {
-    return {
-      title: "ALTERNATIVES",
-      deskripsi: "Karena Kami Ini Cuma Fiktif, Maka Lebih Baik Cari Lain!",
-    };
-  },
-};
+<script setup>
+import { reactive } from "vue";
+const data = reactive({
+  title: "ALTERNATIVES",
+  deskripsi: "Karena Kami Ini Cuma Fiktif, Maka Lebih Baik Cari Lain!",
+});
 </script>
 <template>
   <!-- wrapper alternatives -->
@@ -38,13 +33,13 @@ export default {
           <h1
             class="order-1 text-base font-semibold text-white lg:pl-4 xl:pl-0 font-header"
           >
-            {{ title }}
+            {{ data.title }}
           </h1>
         </div>
         <p
           class="order-2 text-4xl font-bold text-white lg:pl-4 xl:pl-0 font-header"
         >
-          {{ deskripsi }}
+          {{ data.deskripsi }}
         </p>
       </div>
       <!-- deskripsi -->
