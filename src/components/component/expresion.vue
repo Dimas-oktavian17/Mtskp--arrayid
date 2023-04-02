@@ -51,6 +51,7 @@ const content = reactive([
           </h1>
           <a
             :href="contents.href"
+            :aria-label="contents.title"
             class="flex flex-row items-center justify-between order-6 pb-12 text-base font-bold transition-all bg-transparent font-main text-dark group hover:pr-8 hover:opacity-95"
           >
             {{ contents.link }}
